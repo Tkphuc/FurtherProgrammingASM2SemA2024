@@ -10,7 +10,7 @@ public class Claim {
     private String CardNumber;
     private Date examDate;
     private List<String> Documents = new ArrayList<>();
-    private float claimAmount;
+    private double claimAmount;
     private Status status;
     private ReceiverBankingInfo receiverBankingInfo;
     public Claim(){
@@ -68,11 +68,11 @@ public class Claim {
         Documents = documents;
     }
 
-    public float getClaimAmount() {
+    public double getClaimAmount() {
         return claimAmount;
     }
 
-    public void setClaimAmount(float claimAmount) {
+    public void setClaimAmount(double claimAmount) {
         this.claimAmount = claimAmount;
     }
 
@@ -87,7 +87,6 @@ public class Claim {
     public ReceiverBankingInfo getReceiverBankingInfo() {
         return receiverBankingInfo;
     }
-
     public void setReceiverBankingInfo(ReceiverBankingInfo receiverBankingInfo) {
         this.receiverBankingInfo = receiverBankingInfo;
     }

@@ -18,10 +18,12 @@ public class SystemAdmin implements Users{
     public void setAdminID(String adminID) {
         this.adminID = adminID;
     }
-    public void CalculateSuccessfulClaim(){};
-    public void RetrieveClaim(){};
+    public void CalculateSuccessfulClaim(){}
+
+    public void RetrieveClaim(){}
+
     @Override
-    public void Login() {
+    public boolean Login(String ID, String password) {
 
     }
 

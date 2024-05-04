@@ -19,8 +19,12 @@ public abstract class Provider implements Users {
     }
 
     @Override
-    public void Login() {
-
+    public boolean Login(String ID, String password) {
+        if(ID.equals() && password.equals()){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @Override

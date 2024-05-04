@@ -1,6 +1,6 @@
 public interface Users {
-    public void Login();
-    public void Logout();
-    public void updateFullName();
-    public void updatePassword();
+    boolean Login(String ID,String password);
+    void Logout();
+    void updateFullName();
+    void updatePassword();
 }
