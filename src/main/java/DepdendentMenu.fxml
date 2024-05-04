@@ -2,35 +2,27 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity"
-      minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="400.0" prefWidth="600.0"
-      xmlns="http://javafx.com/javafx/21"
-      xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="DependentMenuController">
-   <children>
-      <VBox fx:id="dependentFunctions" layoutX="239.0" layoutY="142.0" prefHeight="78.0" prefWidth="100.0">
+<TitledPane text="Dependent Menu" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DependentMenuController">
+   <content>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Button fx:id="retrieveClaim" mnemonicParsing="false"
-                    prefHeight="26.0" prefWidth="104.0" text="Retrieve claim">
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </Button>
-            <Button fx:id="retrieveInfo" mnemonicParsing="false"
-                    prefHeight="26.0" prefWidth="100.0" text="Retrieve info" />
+            <VBox fx:id="dependentFunctions" layoutX="239.0" layoutY="142.0" prefHeight="78.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="retrieveClaim" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" text="Retrieve claim">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="retrieveInfo" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Retrieve info" />
+               </children>
+            </VBox>
+            <Button fx:id="exit" layoutX="263.0" layoutY="233.0" mnemonicParsing="false" text="Exit" />
          </children>
-      </VBox>
-      <Label fx:id="title" layoutX="227.0" layoutY="36.0" text="Dependent Menu">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-   </children>
-</Pane>
+      </Pane>
+   </content>
+</TitledPane>
