@@ -8,19 +8,26 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="DependentMenuController">
    <children>
-      <VBox layoutX="239.0" layoutY="142.0" prefHeight="78.0" prefWidth="100.0">
+      <VBox fx:id="dependentFunctions" layoutX="239.0" layoutY="142.0" prefHeight="78.0" prefWidth="100.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" text="Retrieve claim">
+            <Button fx:id="retrieveClaim" mnemonicParsing="false"
+                    prefHeight="26.0" prefWidth="104.0" text="Retrieve claim">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Retrieve info" />
+            <Button fx:id="retrieveInfo" mnemonicParsing="false"
+                    prefHeight="26.0" prefWidth="100.0" text="Retrieve info" />
          </children>
       </VBox>
-      <Label layoutX="227.0" layoutY="36.0" text="Dependent Menu">
+      <Label fx:id="title" layoutX="227.0" layoutY="36.0" text="Dependent Menu">
          <font>
             <Font size="16.0" />
          </font>

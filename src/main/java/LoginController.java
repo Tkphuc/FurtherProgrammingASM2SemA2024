@@ -1,18 +1,13 @@
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
+import javafx.scene.control.*;
 
-public class Controller {
+public class LoginController {
     @FXML private Button loginButton;
     @FXML private TextField IDField;
-    @FXML private TextField passwordField;
+    @FXML private PasswordField passwordField;
     @FXML private Label IDLabel;
     @FXML private Label passwordLabel;
-    @FXML private Pane popupPane;
-    @FXML private TextArea wrongInput;
+    @FXML private Label welcomeLabel;
 
     protected String getEnteredID(){
      return IDField.getText();
