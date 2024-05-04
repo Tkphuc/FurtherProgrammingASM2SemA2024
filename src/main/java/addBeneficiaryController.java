@@ -1,9 +1,15 @@
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Objects;
 
 /*https://www.youtube.com/watch?v=hcM-R-YOKkQ
 * */
@@ -17,10 +23,18 @@ public class addBeneficiaryController {
     public Button returnButton;
     public Button nextButton;
     public Scene Scene1;
+    public Scene Scene2;
     public Stage stage;
-    public Parent root;
+    public TextField cardIDField;
+    public DatePicker expirationDateField;
 
-    public void switchToScene2(ActionEvent event){
 
+    public void switchToScene1(ActionEvent event) throws IOException {
+        stage.setScene(Scene1);
+        stage.show();
+    }
+    public void switchToScene2(){
+        stage.setScene(Scene2);
+        stage.show();
     }
 }
