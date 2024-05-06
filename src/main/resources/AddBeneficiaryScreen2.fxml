@@ -4,6 +4,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<!--Is the insurance card ID auto generated ?
+if so, how ?
+If not, what format does it follow - beside what was in asm1 requirements
+!-->
 
 <Scene xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:id="Scene2" fx:controller="addBeneficiaryController">
    <root>
