@@ -1,7 +1,7 @@
 public abstract class Provider implements Users {
     private String providerID;
     private String fullName;
-    private String password
+    private String password;
     public Provider(){}
     public String getProviderID() {
         return providerID;

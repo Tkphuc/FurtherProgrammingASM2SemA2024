@@ -1,7 +1,7 @@
 public class SystemAdmin implements Users{
     private String fullName;
     private String adminID;
-    private String password
+    private String password;
     public SystemAdmin(){}
 
     public String getFullName() {
@@ -31,9 +31,9 @@ public class SystemAdmin implements Users{
     public void CalculateSuccessfulClaim(){}
 
     public void RetrieveClaim(){}
-    public Users addUser()
+    //public Users addUser()
     {}
-    public Users deleteUser(){}
+    //public Users deleteUser(){}
     public void updateUser(){}
     @Override
     public boolean Login(String ID, String password) {

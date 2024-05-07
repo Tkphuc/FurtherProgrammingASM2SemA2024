@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public abstract class Customer implements Users {
     private String customerID;
     private String fullName;
