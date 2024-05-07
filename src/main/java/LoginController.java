@@ -9,10 +9,11 @@ public class LoginController {
     @FXML private Label passwordLabel;
     @FXML private Label welcomeLabel;
 
-    protected String getEnteredID(){
+    @FXML protected String getEnteredID(){
      return IDField.getText();
     }
-    protected String getEnteredPassword()
+    @FXML protected String getEnteredPassword()
     {return passwordField.getText();}
+
     
 }

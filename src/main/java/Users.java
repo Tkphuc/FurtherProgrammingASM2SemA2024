@@ -1,6 +1,6 @@
 public interface Users {
     boolean Login(String ID,String password);
     void Logout();
-    void updateFullName();
+    void updateFullName(String newName);
     void updatePassword();
 }
