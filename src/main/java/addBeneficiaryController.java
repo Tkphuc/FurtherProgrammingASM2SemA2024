@@ -1,4 +1,5 @@
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -15,18 +16,19 @@ import java.util.Objects;
 * */
 public class addBeneficiaryController {
 
-    public TextField beneficiaryTypeField;
-    public TextField beneficiaryNameField;
-    public TextField beneficiaryAddress;
-    public TextField beneficiaryEmail;
-    public TextField beneficiaryPhoneNumber;
-    public Button returnButton;
-    public Button nextButton;
-    public Scene Scene1;
-    public Scene Scene2;
-    public Stage stage;
-    public TextField cardIDField;
-    public DatePicker expirationDateField;
+
+    @FXML public TextField beneficiaryTypeField;
+    @FXML public TextField beneficiaryNameField;
+    @FXML public TextField beneficiaryAddress;
+    @FXML public TextField beneficiaryEmail;
+    @FXML public TextField beneficiaryPhoneNumber;
+    @FXML public Button returnButton;
+    @FXML public Button nextButton;
+    @FXML public Scene Scene1;
+    @FXML public Scene Scene2;
+    @FXML public Stage stage;
+    @FXML public TextField cardIDField;
+    @FXML public TextField expirationDateField;
 
 
     public void switchToScene1(ActionEvent event) throws IOException {

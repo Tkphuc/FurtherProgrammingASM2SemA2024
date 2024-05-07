@@ -6,6 +6,9 @@ import javafx.scene.layout.VBox;
 public class DependentMenuController {
 
     @FXML  public Button exit;
+    public Button retrieveInfoButton;
+    public Button exitButton;
+    public Button retrieveClaimButton;
     @FXML private VBox dependentFunctions;
     @FXML private Button retrieveClaim;
     @FXML private Button retrieveInfo;

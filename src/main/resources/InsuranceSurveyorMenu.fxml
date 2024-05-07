@@ -1,54 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-
-<TitledPane maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0"
-            text="Insurance Surveyor Menu"
-            xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="InsuranceSurveyorMenu">
+<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Insurance Surveyor Menu" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InsuranceSurveyorMenu">
    <content>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <VBox fx:id="functions" layoutX="262.0" layoutY="80.0"
-                  prefHeight="168.0" prefWidth="159.0">
+            <VBox fx:id="functions" layoutX="262.0" layoutY="80.0" prefHeight="168.0" prefWidth="159.0">
                <children>
-                  <Button fx:id="reqMoreClaimInfo" contentDisplay="CENTER"
-                          mnemonicParsing="false" text="Require more claim info"
-                          textAlignment="CENTER">
+                  <Button fx:id="reqMoreClaimInfo" contentDisplay="CENTER" mnemonicParsing="false" text="Require more claim info" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="proposeClaim" alignment="CENTER"
-                          contentDisplay="CENTER" mnemonicParsing="false"
-                          text="Propose claim">
+                  <Button fx:id="proposeClaim" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Propose claim">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="retrieveAllClaims" contentDisplay="CENTER"
-                          mnemonicParsing="false"
-                          text="Retrieve all claims">
+                  <Button fx:id="retrieveAllClaims" contentDisplay="CENTER" mnemonicParsing="false" text="Retrieve all claims">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="retrieveAllCustomers" contentDisplay="CENTER"
-                          mnemonicParsing="false"
-                          text="Retrieve all customers">
+                  <Button fx:id="retrieveAllCustomers" contentDisplay="CENTER" mnemonicParsing="false" text="Retrieve all customers">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="exit" mnemonicParsing="false" text="Exit" />
+                  <Button fx:id="exitButton" mnemonicParsing="false" text="Exit" />
                </children>
             </VBox>
          </children>

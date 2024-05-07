@@ -13,8 +13,8 @@
             <Label layoutX="84.0" layoutY="67.0" text="Bank name" />
             <Label layoutX="84.0" layoutY="139.0" text="Receiver Name" />
             <Label layoutX="56.0" layoutY="200.0" prefHeight="20.0" prefWidth="115.0" text="Account number" />
-            <Button layoutX="138.0" layoutY="298.0" mnemonicParsing="false" text="Return" />
-            <Button layoutX="377.0" layoutY="298.0" mnemonicParsing="false" text="Next" />
+            <Button fx:id="returnButton" layoutX="138.0" layoutY="298.0" mnemonicParsing="false" text="Return" />
+            <Button fx:id="nextButton" layoutX="377.0" layoutY="298.0" mnemonicParsing="false" text="Next" />
          </children>
       </Pane>
    </content>

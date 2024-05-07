@@ -13,15 +13,15 @@
          <children>
             <VBox fx:id="dependentFunctions" layoutX="239.0" layoutY="142.0" prefHeight="78.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="retrieveClaim" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" text="Retrieve claim">
+                  <Button fx:id="retrieveClaimButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" text="Retrieve claim">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="retrieveInfo" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Retrieve info" />
+                  <Button fx:id="retrieveInfoButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Retrieve info" />
                </children>
             </VBox>
-            <Button fx:id="exit" layoutX="263.0" layoutY="233.0" mnemonicParsing="false" text="Exit" />
+            <Button fx:id="exitButton" layoutX="263.0" layoutY="233.0" mnemonicParsing="false" text="Exit" />
          </children>
       </Pane>
    </content>
