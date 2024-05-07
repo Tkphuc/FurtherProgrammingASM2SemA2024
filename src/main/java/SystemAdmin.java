@@ -21,7 +21,10 @@ public class SystemAdmin implements Users{
     public void CalculateSuccessfulClaim(){}
 
     public void RetrieveClaim(){}
-
+    public Users addUser()
+    {}
+    public Users deleteUser(){}
+    public void updateUser(){}
     @Override
     public boolean Login(String ID, String password) {
 
