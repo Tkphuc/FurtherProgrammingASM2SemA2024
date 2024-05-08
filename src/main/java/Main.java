@@ -8,7 +8,7 @@ public class Main extends Application{
     @Override
     public void start(Stage stage){
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen2.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("addBeneficiaryScreen1.fxml"));
             Scene scene = new Scene(parent);
             stage.setScene(scene);
             stage.show();
