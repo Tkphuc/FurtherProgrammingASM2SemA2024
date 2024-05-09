@@ -9,7 +9,7 @@
          <children>
             <VBox fx:id="functions" layoutX="64.0" layoutY="67.0" prefHeight="127.0" prefWidth="189.0">
                <children>
-                  <Button fx:id="approveMenuButton" mnemonicParsing="false" text="Approve/Reject proposed claims">
+                  <Button fx:id="approveMenuButton" mnemonicParsing="false" text="Approve/Reject proposed claims" onAction="#switchToApproveClaimMenu">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -29,7 +29,7 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="exitButton" mnemonicParsing="false" text="Exit" />
+                  <Button fx:id="exitButton" mnemonicParsing="false" text="Exit" onAction= "#switchToLoginScreen" />
                </children>
             </VBox>
          </children>

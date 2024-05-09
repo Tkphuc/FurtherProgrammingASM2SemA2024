@@ -29,7 +29,7 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="exitButton" mnemonicParsing="false" text="Exit" />
+                  <Button fx:id="exitButton" mnemonicParsing="false" text="Exit" onAction="#switchToLoginScreen"/>
                </children>
             </VBox>
          </children>

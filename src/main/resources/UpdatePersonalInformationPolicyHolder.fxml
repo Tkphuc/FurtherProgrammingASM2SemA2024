@@ -25,7 +25,7 @@
             <Button fx:id="exitButton" layoutX="314.0" layoutY="281.0"
                     mnemonicParsing="false" text="Exit" />
 
-            <Label layoutX="33.0" layoutY="27.0" text="Current adress" />
+            <Label layoutX="33.0" layoutY="27.0" text="Current address" />
             <Label layoutX="10.0" layoutY="116.0" text="Current phone number" />
 
             <Text fx:id="currentAddress" layoutX="154.0" layoutY="40.0"

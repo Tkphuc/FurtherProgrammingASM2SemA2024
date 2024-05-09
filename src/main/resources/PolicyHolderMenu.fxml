@@ -25,15 +25,15 @@
             </VBox>
             <VBox fx:id="policyHolderFunctions" layoutX="353.0" layoutY="121.0" prefHeight="98.0" prefWidth="127.0">
                <children>
-                  <Button fx:id="getSelfInfo" mnemonicParsing="false" text="Get self's info">
+                  <Button fx:id="getSelfInfo" mnemonicParsing="false" text="Get self's info" onAction="#switchToGetSelfInfo">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="updateSelfInfo" mnemonicParsing="false" text="Update self's info" />
+                  <Button fx:id="updateSelfInfo" mnemonicParsing="false" text="Update self's info" onAction="#switchToUpdateSelfInfo"/>
                </children>
             </VBox>
-            <Button fx:id="exit" layoutX="274.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="39.0" text="Exit" />
+            <Button fx:id="exit" layoutX="274.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="39.0" text="Exit" onAction="#switchToLoginScreen" />
          </children>
       </Pane>
    </content>
