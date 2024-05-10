@@ -1,3 +1,5 @@
+package controllers;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class InsuranceSurveyorMenu {
+public class InsuranceSurveyorMenuController {
    @FXML private Button exitButton;
     @FXML
     private VBox functions;

@@ -1,3 +1,5 @@
+package controllers;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -43,7 +45,7 @@ public class PolicyOwnerMenuController {
         stage.show();
     }
     public void switchToViewBeneficiaryInfo(ActionEvent event) throws IOException{
-        Parent parent = FXMLLoader.load(getClass().getResource("ClaimInformation.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("ViewBeneficiaryInfo.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(parent);
         stage.setScene(scene);
@@ -63,4 +65,21 @@ public class PolicyOwnerMenuController {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToUpdateBeneficiary(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("UpdateBeneficiary.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToPolicyOwnerMenu(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("PolicyOwnerMenu.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
 }

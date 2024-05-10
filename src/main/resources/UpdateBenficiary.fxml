@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+<TitledPane animated="false" maxHeight="-Infinity"
+            maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" text="Update Personal Information"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.PolicyOwnerMenuController">
+   <content>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="newAddressField" layoutX="141.0" layoutY="73.0" />
+            <TextField fx:id="newPhoneNumberField" layoutX="141.0" layoutY="149.0" />
+            <TextField fx:id="newEmailField" layoutX="141.0" layoutY="229.0" />
+
+            <Label layoutX="37.0" layoutY="77.0" text="New address" />
+            <Label layoutX="18.0" layoutY="153.0" text="New phone number" />
+            <Label layoutX="49.0" layoutY="233.0" text="New email" />
+
+            <Button fx:id="saveButton" layoutX="125.0" layoutY="281.0" mnemonicParsing="false" text="Save" />
+            <Button fx:id="returnButton" layoutX="314.0" layoutY="281.0" mnemonicParsing="false" onAction="#switchToPolicyOwnerMenu" text="Return" />
+
+            <Label layoutX="33.0" layoutY="27.0" text="Current address" />
+            <Label layoutX="10.0" layoutY="116.0" text="Current phone number" />
+
+            <Text fx:id="currentAddress" layoutX="154.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current address" />
+            <Text fx:id="currentPhoneNumber" layoutX="165.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current phone number" />
+            <Text fx:id="currentEmail" layoutX="188.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current email" />
+            <Label layoutX="41.0" layoutY="194.0" text="Current email" />
+         </children>
+      </Pane>
+   </content>
+</TitledPane>

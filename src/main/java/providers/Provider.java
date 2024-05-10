@@ -1,16 +1,16 @@
-public abstract class Customer implements Users {
-    private String customerID;
+package providers;
+
+public abstract class Provider implements Users {
+    private String providerID;
     private String fullName;
     private String password;
-    public Customer() {
-    }
+    public Provider(){}
     public String getID() {
-        return customerID;
+        return providerID;
     }
 
-
-    public void setID(String customerID) {
-        this.customerID = customerID;
+    public void setID(String providerID) {
+        this.providerID = providerID;
     }
 
     public String getFullName() {
@@ -31,17 +31,23 @@ public abstract class Customer implements Users {
 
     @Override
     public boolean Login(String ID, String password) {
-        return this.customerID.equals(ID) && this.password.equals(password);
+        if(ID.equals(this.providerID) && password.equals(this.password)){
+            return true;
+        }else {
+            return false;
+        }
     }
+
     @Override
     public void Logout() {
 
     }
+
     @Override
     public void updateFullName(String newName) {
-        if(!newName.equals(this.fullName))
-            this.fullName = newName;
+
     }
+
     @Override
     public void updatePassword() {
 

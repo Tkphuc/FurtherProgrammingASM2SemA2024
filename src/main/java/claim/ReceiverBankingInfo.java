@@ -1,3 +1,5 @@
+package claim;
+
 public class ReceiverBankingInfo {
     private String bank;
     private  String name;

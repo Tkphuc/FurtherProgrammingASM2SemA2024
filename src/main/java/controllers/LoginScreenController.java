@@ -1,3 +1,9 @@
+package controllers;
+
+import customers.Customer;
+import customers.Dependent;
+import customers.PolicyHolder;
+import customers.PolicyOwner;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,10 +15,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import providers.InsuranceManager;
+import providers.InsuranceSurveyor;
+import providers.Provider;
 
 import java.io.IOException;
 
-public class LoginController {
+public class LoginScreenController {
     @FXML private Button loginButton;
     @FXML private TextField IDField;
     @FXML private PasswordField passwordField;
@@ -79,7 +88,7 @@ public class LoginController {
                   case InsuranceManager insuranceManager -> {
                       Parent root = null;
                       try {
-                          root = FXMLLoader.load(getClass().getResource("InsuranceManagerMenu.fxml"));
+                          root = FXMLLoader.load(getClass().getResource("controllers.InsuranceManagerMenuController.fxml"));
                       } catch (IOException e) {
                           throw new RuntimeException(e);
                       }
@@ -91,7 +100,7 @@ public class LoginController {
                   case InsuranceSurveyor insuranceSurveyor -> {
                       Parent root = null;
                       try {
-                          root = FXMLLoader.load(getClass().getResource("InsuranceSurveyorMenu.fxml"));
+                          root = FXMLLoader.load(getClass().getResource("controllers.InsuranceSurveyorMenuController.fxml"));
                       } catch (IOException e) {
                           throw new RuntimeException(e);
                       }
@@ -140,14 +149,14 @@ public class LoginController {
         stage.show();
     }
     public void switchToInsuranceManagerMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("InsuranceManagerMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("controllers.InsuranceManagerMenuController.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void switchToInsuranceSurveyorMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("InsuranceSurveyorMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("controllers.InsuranceSurveyorMenuController.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
