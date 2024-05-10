@@ -8,7 +8,7 @@ fx:controller="FileClaimMenuController">
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
             <Button fx:id="returnButton" layoutX="168.0" layoutY="331.0" mnemonicParsing="false" text="Return" onAction="#switchPolicyOwnerMenu" />
-            <Button fx:id="nextButton" layoutX="404.0" layoutY="331.0" mnemonicParsing="false" text="Next"  />
+            <Button fx:id="nextButton" layoutX="404.0" layoutY="331.0" mnemonicParsing="false" text="Next"  onAction="#switchToBankingInfoMenu"/>
             <TextField fx:id="claimAmountField" layoutX="255.0" layoutY="94.0" />
             <TextField fx:id="examDateField" layoutX="245.0" layoutY="137.0" />
             <TextField fx:id="claimDateField" layoutX="245.0" layoutY="183.0" />

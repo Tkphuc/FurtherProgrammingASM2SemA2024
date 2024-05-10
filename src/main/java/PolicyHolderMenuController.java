@@ -22,7 +22,7 @@ public class PolicyHolderMenuController {
     @FXML private Button getSelfInfo;
     @FXML private Button updateSelfInfo;
 
-    @FXML  public Button exit;
+    @FXML private Button exit;
     @FXML private Stage stage;
     @FXML private Scene scene;
     @FXML Parent root;

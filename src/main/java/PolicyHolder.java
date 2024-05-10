@@ -6,4 +6,5 @@ public class PolicyHolder extends Beneficiary {
     public void FileClaim(){}
     public void UpdateClaim(){}
     public void RetrieveClaim(){}
+    public void updatePolicyHolder(){}
 }

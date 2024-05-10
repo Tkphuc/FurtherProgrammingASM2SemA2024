@@ -3,4 +3,11 @@ public interface Users {
     void Logout();
     void updateFullName(String newName);
     void updatePassword();
+    String getID();
+    String getPassword();
+    String getFullName();
+    void setFullName(String fullName);
+    void setPassword(String password);
+    void setID(String ID);
+
 }

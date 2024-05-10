@@ -4,11 +4,12 @@ public abstract class Customer implements Users {
     private String password;
     public Customer() {
     }
-    public String getCustomerID() {
+    public String getID() {
         return customerID;
     }
 
-    public void setCustomerID(String customerID) {
+
+    public void setID(String customerID) {
         this.customerID = customerID;
     }
 

@@ -3,11 +3,11 @@ public abstract class Provider implements Users {
     private String fullName;
     private String password;
     public Provider(){}
-    public String getProviderID() {
+    public String getID() {
         return providerID;
     }
 
-    public void setProviderID(String providerID) {
+    public void setID(String providerID) {
         this.providerID = providerID;
     }
 

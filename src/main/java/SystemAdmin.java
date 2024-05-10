@@ -12,11 +12,11 @@ public class SystemAdmin implements Users{
         this.fullName = fullName;
     }
 
-    public String getAdminID() {
+    public String getID() {
         return adminID;
     }
 
-    public void setAdminID(String adminID) {
+    public void setID(String adminID) {
         this.adminID = adminID;
     }
 
