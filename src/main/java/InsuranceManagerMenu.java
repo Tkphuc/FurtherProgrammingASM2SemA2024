@@ -1,5 +1,3 @@
-package controllers;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class InsuranceManagerMenuController {
+public class InsuranceManagerMenu {
     @FXML private VBox functions;
     @FXML private Button retrieveSurveyorsButton;
     @FXML private Button retrieveAllCustomersButton;

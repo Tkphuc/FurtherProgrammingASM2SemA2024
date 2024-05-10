@@ -1,10 +1,3 @@
-package utility;
-
-import customers.Customer;
-import customers.Dependent;
-import customers.PolicyHolder;
-import customers.PolicyOwner;
-
 public class customerFactory {
     public static Customer createCustomer(String customerType){
         if(customerType.equalsIgnoreCase("Policy Owner"))

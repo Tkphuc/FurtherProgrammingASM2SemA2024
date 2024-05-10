@@ -10,7 +10,7 @@
             <Button fx:id="updateUserButton" layoutX="128.0" layoutY="213.0" mnemonicParsing="false" text="Update User" />
             <Button fx:id="exitButton" layoutX="226.0" layoutY="284.0" mnemonicParsing="false" text="Exit" />
             <Button fx:id="retrieveAllClaims" layoutX="285.0" layoutY="127.0" mnemonicParsing="false" text="Retrieve all claims" />
-            <Button fx:id="addProviderButton" layoutX="126.0" layoutY="140.0" mnemonicParsing="false" text="Add providers.Provider" />
+            <Button fx:id="addProviderButton" layoutX="126.0" layoutY="140.0" mnemonicParsing="false" text="Add Provider" />
          </children>
       </Pane>
    </content>

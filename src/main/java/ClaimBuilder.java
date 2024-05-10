@@ -1,11 +1,6 @@
-package utility; /**
+/**
  * @author <Tran Kiem Phuc - s3927187>
  */
-import claim.Claim;
-import claim.ReceiverBankingInfo;
-import claim.Status;
-import customers.Customer;
-
 import java.util.Date;
 import java.util.List;
 

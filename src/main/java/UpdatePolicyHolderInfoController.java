@@ -1,6 +1,3 @@
-package controllers;
-
-import customers.PolicyHolder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class UpdateDependentMenuController {
+public class UpdatePolicyHolderInfoController {
     @FXML private TextField newAddressField;
     @FXML private TextField newPhoneNumberField;
     @FXML private TextField newEmailField;

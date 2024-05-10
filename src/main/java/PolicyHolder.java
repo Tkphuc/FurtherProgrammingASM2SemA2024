@@ -1,5 +1,3 @@
-package customers;
-
 import java.util.List;
 
 public class PolicyHolder extends Beneficiary {

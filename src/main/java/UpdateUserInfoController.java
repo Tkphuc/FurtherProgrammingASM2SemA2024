@@ -1,11 +1,9 @@
-package controllers;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-public class UpdateUserInfoMenuController {
+public class UpdateUserInfoController {
     @FXML private  PasswordField newPasswordField;
     @FXML private TextField newIDField;
     @FXML private TextField newFullNameField;

@@ -1,5 +1,3 @@
-import customers.Customer;
-
 import java.util.Date;
 
 public class InsuranceCard {

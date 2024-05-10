@@ -1,5 +1,3 @@
-package customers;
-
 public abstract class Beneficiary extends Customer {
     private InsuranceCard insuranceCard;
     private String address;
