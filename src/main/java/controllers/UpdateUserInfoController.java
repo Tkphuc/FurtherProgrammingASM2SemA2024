@@ -5,6 +5,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import users.Users;
+import users.customers.Beneficiary;
+import users.providers.Provider;
 
 public class UpdateUserInfoController {
     @FXML private  PasswordField newPasswordField;
@@ -36,5 +38,12 @@ public class UpdateUserInfoController {
 
     public String getNewFullName() {
         return newFullNameField.getText();
+    }
+    public void switchScenes(){
+        if(user instanceof Beneficiary){
+
+        } else if (user instanceof Provider) {
+
+        }
     }
 }
