@@ -6,7 +6,7 @@ public class customerFactory {
             return new PolicyOwner();
         else if(customerType.equalsIgnoreCase("Policy Holder"))
             return new PolicyHolder();
-        else if(customerType.equalsIgnoreCase("dependent"))
+        else if(customerType.equalsIgnoreCase("Dependent"))
             return new Dependent();
         else
             System.out.println("Wrong input");

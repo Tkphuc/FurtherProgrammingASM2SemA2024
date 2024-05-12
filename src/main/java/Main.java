@@ -1,3 +1,4 @@
+import controllers.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,7 +9,7 @@ public class Main extends Application{
     @Override
     public void start(Stage stage){
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("addBeneficiaryScreen1.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));
             Scene scene = new Scene(parent);
             stage.setScene(scene);
             stage.show();

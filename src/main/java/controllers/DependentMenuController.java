@@ -13,6 +13,9 @@ public class DependentMenuController {
     @FXML private VBox dependentFunctions;
     @FXML private Button retrieveClaim;
     @FXML private Button retrieveInfo;
+
+    public DependentMenuController() {
+    }
     /*
     public void switchToLoginScreen(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));

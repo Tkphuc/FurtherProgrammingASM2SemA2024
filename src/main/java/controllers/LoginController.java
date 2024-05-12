@@ -34,11 +34,29 @@ public class LoginController {
     @FXML
     private Stage stage;
     @FXML private Scene scene;
+    @FXML private  Parent parent;
+
     @FXML protected String getEnteredID(){
      return IDField.getText();
     }
     @FXML protected String getEnteredPassword()
     {return passwordField.getText();}
+
+    public LoginController() {
+    }
+    /*
+    public void showLoginScreen(){
+        try {
+            Parent parent = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));
+            scene = new Scene(parent);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+
+        }
+
+    }*/
+    @FXML
     public void Login(ActionEvent event){
       boolean b = user.Login(getEnteredID(),getEnteredPassword());
       if(!b){
@@ -117,7 +135,7 @@ public class LoginController {
           } else if (user instanceof SystemAdmin) {
               Parent root = null;
               try {
-                  root = FXMLLoader.load(getClass().getResource("SystemAdminMenu.fxml"));
+                  root = FXMLLoader.load(getClass().getResource("SystemAdminMenuController.fxml"));
               } catch (IOException e) {
                   throw new RuntimeException(e);
               }
@@ -165,7 +183,7 @@ public class LoginController {
         stage.show();
     }
     public void switchToSystemAdminMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("SystemAdminMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("SystemAdminMenuController.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

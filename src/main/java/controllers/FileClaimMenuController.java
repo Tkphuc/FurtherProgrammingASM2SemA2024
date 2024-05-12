@@ -25,6 +25,10 @@ public class FileClaimMenuController {
     @FXML
     private Scene scene;
     @FXML private Stage stage;
+
+    public FileClaimMenuController() {
+    }
+
     public void switchToBankingInfoMenu(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("ViewBanking.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

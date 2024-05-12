@@ -15,8 +15,8 @@ If not, what format does it follow - beside what was in asm1 requirements
       <TextField fx:id="cardIDField" layoutX="152.0" layoutY="162.0" prefHeight="25.0" prefWidth="397.0" />
       <Label layoutX="25.0" layoutY="166.0" text="Insurance Card ID" />
       <Label layoutX="30.0" layoutY="215.0" text=" Expiration Date" />
-      <Button fx:id="returnButton" layoutX="232.0" layoutY="285.0" mnemonicParsing="false" onAction="#switchToAddBeneficiaryScreen1" text="Return" />
-      <Button fx:id="nextButton" layoutX="318.0" layoutY="285.0" mnemonicParsing="false" text="Next" />
+      <Button fx:id="returnButtonScreen1" layoutX="232.0" layoutY="285.0" mnemonicParsing="false" onAction="#switchToAddBeneficiaryScreen1" text="Return" />
+      <Button fx:id="nextButtonScreen1" layoutX="318.0" layoutY="285.0" mnemonicParsing="false" text="Next" />
       <Label layoutX="36.0" layoutY="52.0" text="users.customers.Beneficiary ID" />
       <Label layoutX="29.0" layoutY="102.0" text="users.customers.Beneficiary Type" />
       <TextField fx:id="expirationDateField" layoutX="152.0" layoutY="211.0" prefHeight="25.0" prefWidth="373.0" />

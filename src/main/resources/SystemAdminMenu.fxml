@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.Pane?>
-<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="System Admin Menu" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+
+<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="System Admin Menu" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SystemAdminMenuController">
    <content>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
             <Button fx:id="addCustomerButton" layoutX="120.0" layoutY="82.0" mnemonicParsing="false" text="Add customer" />
-            <Button fx:id="updateUserButton" layoutX="128.0" layoutY="213.0" mnemonicParsing="false" text="Update User" />
-            <Button fx:id="exitButton" layoutX="226.0" layoutY="284.0" mnemonicParsing="false" text="Exit" />
-            <Button fx:id="retrieveAllClaims" layoutX="285.0" layoutY="127.0" mnemonicParsing="false" text="Retrieve all claims" />
-            <Button fx:id="addProviderButton" layoutX="126.0" layoutY="140.0" mnemonicParsing="false" text="Add users.providers.Provider" />
+            <Button fx:id="updateUserButton" layoutX="128.0" layoutY="213.0" mnemonicParsing="false" text="Update customer" />
+            <Button fx:id="exitButton" layoutX="282.0" layoutY="284.0" mnemonicParsing="false" onAction="#switchToLoginScreen" text="Exit" />
+            <Button fx:id="retrieveAllClaims" layoutX="342.0" layoutY="115.0" mnemonicParsing="false" text="Retrieve all claims" />
+            <Button fx:id="addProviderButton" layoutX="126.0" layoutY="140.0" mnemonicParsing="false" text="Add providers" />
+            <Button layoutX="342.0" layoutY="174.0" mnemonicParsing="false" text="Update provider" />
          </children>
       </Pane>
    </content>

@@ -30,6 +30,9 @@ public class InsuranceSurveyorMenu {
     private Stage stage;
     @FXML private Scene scene;
 
+    public InsuranceSurveyorMenu() {
+    }
+
     public void switchToLoginScreen(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
