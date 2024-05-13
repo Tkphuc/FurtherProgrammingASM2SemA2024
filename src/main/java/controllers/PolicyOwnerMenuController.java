@@ -15,77 +15,69 @@ import java.io.IOException;
 public class PolicyOwnerMenuController {
 
     @FXML private VBox claimFunctions;
-    @FXML public Button fileClaim;
-    @FXML public Button updateClaim;
-    @FXML public Button retrieveClaim;
-    @FXML public Button deleteClaim;
+    @FXML private Button fileClaim;
+    @FXML private Button updateClaim;
+    @FXML private Button retrieveClaim;
+    @FXML private Button deleteClaim;
 
-    @FXML public VBox beneficiaryFunctions;
-    @FXML public Button addBeneficiary;
-    @FXML public Button updateBeneficiary;
-    @FXML public Button removeBeneficiary;
+    @FXML private VBox beneficiaryFunctions;
+    @FXML private Button addBeneficiary;
+    @FXML private Button updateBeneficiary;
+    @FXML private Button removeBeneficiary;
 
-    @FXML  public Button calculateYearlyFees;
-    @FXML private Stage stage;
-    @FXML private Scene scene;
-    @FXML Parent root;
-    @FXML public Button exit;
-    public PolicyOwnerMenuController(){
+    @FXML private Button calculateYearlyFees;
+    @FXML private Button exit;
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
+    public PolicyOwnerMenuController() {
         stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PolicyOwnerMenu.fxml"));
-        loader.setController(this);
         try {
-            scene = new Scene(loader.load());
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/path/to/PolicyOwnerMenu.fxml"));
+            root = loader.load();
+            scene = new Scene(root);
+            stage.setScene(scene);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();  // Log or handle the exception properly
         }
-        stage.setScene(scene);
     }
-    public void showStage(){
+
+    public void showStage() {
         stage.showAndWait();
     }
-    @FXML
-    private void initialize(){
 
-    }
     @FXML
     public void switchToFileClaimMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("FileClaim.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
-        stage.setScene(scene);
-        stage.show();
+        switchScene("FileClaim.fxml", event);
     }
+
     @FXML
-    public void switchToClaimInformationMenu(ActionEvent event) throws IOException{
-        Parent parent = FXMLLoader.load(getClass().getResource("ClaimInformation.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
-        stage.setScene(scene);
-        stage.show();
+    public void switchToClaimInformationMenu(ActionEvent event) throws IOException {
+        switchScene("ClaimInformation.fxml", event);
     }
+
     @FXML
-    public void switchToViewBeneficiaryInfo(ActionEvent event) throws IOException{
-        Parent parent = FXMLLoader.load(getClass().getResource("ClaimInformation.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
-        stage.setScene(scene);
-        stage.show();
+    public void switchToViewBeneficiaryInfo(ActionEvent event) throws IOException {
+        switchScene("ClaimInformation.fxml", event);
     }
+
     @FXML
-    public void switchToLoginScreen(ActionEvent event) throws IOException{
-        Parent parent = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
-        stage.setScene(scene);
-        stage.show();
+    public void switchToLoginScreen(ActionEvent event) throws IOException {
+        switchScene("loginScreen.fxml", event);
     }
+
     @FXML
     public void switchToAddBeneficiaryScreen1(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen1.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        switchScene("AddBeneficiaryScreen1.fxml", event);
+    }
+
+    private void switchScene(String fxmlFile, ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("/path/to/" + fxmlFile));
+        Scene newScene = new Scene(parent);
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.setScene(newScene);
+        currentStage.show();
     }
 }
