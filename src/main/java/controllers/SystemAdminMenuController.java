@@ -52,4 +52,13 @@ public class SystemAdminMenuController {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToUpdateInsuranceCardMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("UpdateInsuranceCardMenu.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
 }

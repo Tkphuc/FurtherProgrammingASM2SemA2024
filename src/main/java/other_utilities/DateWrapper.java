@@ -21,18 +21,18 @@ public class DateWrapper {
     private static final String DATE_FORMAT = "dd/MM/yyyy";
     private  DateFormat format = new SimpleDateFormat(DATE_FORMAT);
     private Matcher matcher;
-    public DateWrapper(Date date){
-        this.date = date;
-    }
     public DateWrapper(){}
     public Date dateCreate(String date) {
         format.setLenient(false);//to enforce the user of correct input
         try{
             this.date = format.parse(date);
         }catch (ParseException e){
-            System.out.println("Wrong date input");
+            return null;
         }
         return this.date;
+    }
+    public String dateToString(Date date){
+        return format.format(date);
     }
 
 }

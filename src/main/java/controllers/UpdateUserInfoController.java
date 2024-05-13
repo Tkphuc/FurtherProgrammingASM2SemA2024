@@ -15,6 +15,7 @@ public class UpdateUserInfoController {
     @FXML private  Text currentID;
     @FXML private  Text currentFullName;
     @FXML private  Text currentPassword;
+    private UpdateBeneficiaryInfoController updateBeneficiaryInfoController;
     private Users user;
     public void setCurrentID() {
        this.currentID.setText(user.getID());
@@ -39,8 +40,14 @@ public class UpdateUserInfoController {
     public String getNewFullName() {
         return newFullNameField.getText();
     }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
+
     public void switchScenes(){
         if(user instanceof Beneficiary){
+            updateBeneficiaryInfoController = new UpdateBeneficiaryInfoController();
 
         } else if (user instanceof Provider) {
 
