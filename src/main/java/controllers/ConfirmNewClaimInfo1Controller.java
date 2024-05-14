@@ -62,15 +62,16 @@ public class ConfirmNewClaimInfo1Controller {
         this.receiverBankNumberText.setText(receiverBankNumberText);
     }
     public void switchToReceiverBankingInfo(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("FileReceiverBankingInfo.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        Parent parent = loader.load(getClass().getResource("FileReceiverBankingInfo.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
          Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }
     public void switchToConfirmNewClamInfo2(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("ConfirmNewClaimInfo2.fxml"));
-
+        FXMLLoader loader = new FXMLLoader();
+        Parent parent = loader.load(getClass().getResource("ConfirmNewClaimInfo2.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

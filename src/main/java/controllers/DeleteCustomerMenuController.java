@@ -20,7 +20,9 @@ public class DeleteCustomerMenuController {
     // Method to switch back to the System Admin Menu
     public void switchToSystemAdminMenu(ActionEvent event) throws IOException {
         // Correct FXML file should be loaded, replace "PolicyHolderMenu.fxml" if that's not correct
-        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.load(getClass().getResource("SystemAdminMenu.fxml"));
+        Parent parent = loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

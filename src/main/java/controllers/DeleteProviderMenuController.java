@@ -19,7 +19,9 @@ public class DeleteProviderMenuController {
 
     // Method to switch back to the System Admin Menu
     public void switchToSystemAdminMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminMenu.fxml"));  // Ensure the FXML file name is correct
+        FXMLLoader loader = new FXMLLoader();
+        loader.load(getClass().getResource("SystemAdminMenu.fxml"));
+        Parent parent = loader.load();// Ensure the FXML file name is correct
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

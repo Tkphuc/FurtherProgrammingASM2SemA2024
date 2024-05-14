@@ -34,10 +34,13 @@ public class InsuranceSurveyorMenu {
     }
 
     public void switchToLoginScreen(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.load(getClass().getResource("loginScreen.fxml"));
+        Parent parent = loader.load();;
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }
+
 }
