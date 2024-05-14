@@ -1,7 +1,7 @@
 package controllers;
 /*
 public class MainController {
-    private addBeneficiaryController addBeneficiaryController = new addBeneficiaryController();
+    private AddBeneficiaryScreen1Controller AddBeneficiaryScreen1Controller = new AddBeneficiaryScreen1Controller();
     private DependentMenuController dependentMenuController = new DependentMenuController();
     private FileClaimMenuController fileClaimMenuController = new FileClaimMenuController();
     private InsuranceManagerMenu insuranceManagerMenu = new InsuranceManagerMenu();
@@ -21,8 +21,8 @@ public class MainController {
         return dependentMenuController;
     }
 
-    public controllers.addBeneficiaryController getAddBeneficiaryController() {
-        return addBeneficiaryController;
+    public controllers.AddBeneficiaryScreen1Controller getAddBeneficiaryController() {
+        return AddBeneficiaryScreen1Controller;
     }
 
     public FileClaimMenuController getFileClaimMenuController() {

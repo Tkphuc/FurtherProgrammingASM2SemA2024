@@ -3,8 +3,13 @@ package controllers;
 import claim.Claim;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -58,16 +63,16 @@ public class ConfirmNewClaimInfo1Controller {
     }
     public void switchToReceiverBankingInfo(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("FileReceiverBankingInfo.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+         Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }
     public void switchToConfirmNewClamInfo2(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("ConfirmNewClaimInfo2.fxml"));
 
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }

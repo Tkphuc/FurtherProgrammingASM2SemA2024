@@ -15,11 +15,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /*https://www.youtube.com/watch?v=hcM-R-YOKkQ*/
-public class addBeneficiaryController {
+public class AddBeneficiaryScreen1Controller {
 
-    @FXML private TextField cardIDField;
-    @FXML private Button returnButtonScreen1;
-    @FXML private Button nextButtonScreen1;
     @FXML private TextField expirationDateField;
     @FXML private TextField beneficiaryTypeField;
     @FXML private TextField beneficiaryNameField;
@@ -28,35 +25,29 @@ public class addBeneficiaryController {
     @FXML private TextField beneficiaryPhoneNumber;
     @FXML private CheckBox dependentChoice;
     @FXML private CheckBox policyHolderChoice;
-    @FXML private Text beneficiaryIDText;
-    @FXML private Text beneficiaryTypeText;
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-
-
-    public addBeneficiaryController() {
+    public AddBeneficiaryScreen1Controller() {
     }
 
-    public void switchToAddBeneficiaryScreen1(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen1.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
     public void switchToAddBeneficiaryScreen2(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen2.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        FXMLLoader loader = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen2.fxml"));
+        Parent root = loader.load();
+        AddBeneficiaryScreen2Controller addBeneficiaryScreen2Controller = loader.getController();
+        if(isPolicyHolderSelected()){
+            addBeneficiaryScreen2Controller.setBeneficiaryTypeText("Policy Holder");
+        } else if (isDependentSelected()) {
+            addBeneficiaryScreen2Controller.setBeneficiaryTypeText("Dependent");
+        }
+        //addBeneficiaryScreen2Controller.setBeneficiaryIDText(get);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void switchToPolicyOwnerMenu(ActionEvent event) throws IOException{
         Parent parent = FXMLLoader.load(getClass().getResource("PolicyOwnerMenu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }
@@ -85,10 +76,6 @@ public class addBeneficiaryController {
         return beneficiaryPhoneNumber.getText();
     }
 
-    public String getCardIDField() {
-        return cardIDField.getText();
-    }
-
     public boolean isDependentSelected() {
         return dependentChoice.isSelected();
     }
@@ -97,11 +84,5 @@ public class addBeneficiaryController {
         return policyHolderChoice.isSelected();
     }
 
-    public void setBeneficiaryIDText(String beneficiaryIDText) {
-        this.beneficiaryIDText.setText(beneficiaryIDText);
-    }
 
-    public void setBeneficiaryTypeText(String beneficiaryTypeText) {
-        this.beneficiaryTypeText.setText(beneficiaryTypeText);
-    }
 }

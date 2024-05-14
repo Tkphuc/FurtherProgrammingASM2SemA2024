@@ -30,8 +30,8 @@ public class AddCustomerMenuController {
     @FXML public String getCustomerPassword(){return customerPasswordField.getText();}
     public void switchToSystemAdminMenu(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminMenu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }
@@ -49,16 +49,17 @@ public class AddCustomerMenuController {
     };
     public void switchToAddBeneficiaryScreen(ActionEvent event){
         Parent parent = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen1.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }
     public void switchToNextStep(ActionEvent event){
+        AddBeneficiaryScreen1Controller addBeneficiaryScreen1Controller = new AddBeneficiaryScreen1Controller();
         if(chosenType.equalsIgnoreCase(customerTypes[0])){
             customerFactory.createCustomer(chosenType);
         } else if (chosenType.equalsIgnoreCase(customerTypes[1])) {
-            switchToAddBeneficiaryScreen();
+            addBeneficiaryScreen1Controller.s
         } else if (chosenType.equalsIgnoreCase(customerTypes[2])) {
             switchToAddBeneficiaryScreen();
         }
