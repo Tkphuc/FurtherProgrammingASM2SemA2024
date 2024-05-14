@@ -71,10 +71,5 @@ public class ConfirmNewClaimInfo1Controller {
         stage.setScene(scene);
         stage.show();
     }
-    public Claim createNewClaim(){
-        if(checkDate(getClaimDate()) &&checkDate(getExamDate()) &&checkID(getCustomerID())){
-            claimBuilder.setClaimAmount(getClaimAmount()).setClaimDate(dateWrapper.dateCreate(getClaimDate()))
-                    .setCardNumber()
-        }
-    }
+
 }

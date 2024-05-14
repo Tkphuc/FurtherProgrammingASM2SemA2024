@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="controllers.AddDependentBeneficiaryController">
+   <children>
+      <Button layoutX="120.0" layoutY="322.0" mnemonicParsing="false" text="Return" />
+      <Button layoutX="383.0" layoutY="322.0" mnemonicParsing="false" text="Button" />
+      <Label layoutX="47.0" layoutY="49.0" text="Policy Holder of Dependent" />
+      <TextField fx:id="policyHolderOfDependentField" layoutX="244.0" layoutY="45.0" prefHeight="25.0" prefWidth="261.0" />
+   </children>
+</Pane>

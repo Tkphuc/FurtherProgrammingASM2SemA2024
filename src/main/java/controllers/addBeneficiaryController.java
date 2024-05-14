@@ -1,27 +1,36 @@
 package controllers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 /*https://www.youtube.com/watch?v=hcM-R-YOKkQ*/
 public class addBeneficiaryController {
-    public TextField cardIDField;
-    public Button returnButtonScreen1;
-    public Button nextButtonScreen1;
-    public TextField expirationDateField;
-    public TextField beneficiaryTypeField;
-    public TextField beneficiaryNameField;
-    public TextField beneficiaryAddress;
-    public TextField beneficiaryEmail;
-    public TextField beneficiaryPhoneNumber;
+
+    @FXML private TextField cardIDField;
+    @FXML private Button returnButtonScreen1;
+    @FXML private Button nextButtonScreen1;
+    @FXML private TextField expirationDateField;
+    @FXML private TextField beneficiaryTypeField;
+    @FXML private TextField beneficiaryNameField;
+    @FXML private TextField beneficiaryAddress;
+    @FXML private TextField beneficiaryEmail;
+    @FXML private TextField beneficiaryPhoneNumber;
+    @FXML private CheckBox dependentChoice;
+    @FXML private CheckBox policyHolderChoice;
+    @FXML private Text beneficiaryIDText;
+    @FXML private Text beneficiaryTypeText;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -78,5 +87,21 @@ public class addBeneficiaryController {
 
     public String getCardIDField() {
         return cardIDField.getText();
+    }
+
+    public boolean isDependentSelected() {
+        return dependentChoice.isSelected();
+    }
+
+    public boolean isPolicyHolderSelected() {
+        return policyHolderChoice.isSelected();
+    }
+
+    public void setBeneficiaryIDText(String beneficiaryIDText) {
+        this.beneficiaryIDText.setText(beneficiaryIDText);
+    }
+
+    public void setBeneficiaryTypeText(String beneficiaryTypeText) {
+        this.beneficiaryTypeText.setText(beneficiaryTypeText);
     }
 }
