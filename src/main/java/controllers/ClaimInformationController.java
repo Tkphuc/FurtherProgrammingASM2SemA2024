@@ -13,7 +13,7 @@ public class ClaimInformationController {
     @FXML private Text claimAmount;
     @FXML private Text examDate;
     @FXML private Text claimDate;
-    @FXML private Text status;
+    @FXML private String status;
 
     public void setClaimIDText(String claimIDText) {
         this.claimIDText.setText(claimIDText);
