@@ -3,6 +3,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+
 <TitledPane text="Policy Owner Menu" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PolicyOwnerMenuController">
    <content>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
@@ -34,20 +35,20 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="updateBeneficiary" mnemonicParsing="false" text="Update beneficiary" onAction="#switchToUpdateBeneficiary">
+                  <Button fx:id="updateBeneficiary" mnemonicParsing="false" text="Update beneficiary">
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="removeBeneficiary" mnemonicParsing="false" text="Remove customers.Beneficiary">
+                  <Button fx:id="removeBeneficiary" mnemonicParsing="false" text="Remove Beneficiary">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin></Button>
-                  <Button fx:id="retrieveBeneficiaryButton" mnemonicParsing="false" text="Retrieve customers.Beneficiary" onAction="#switchToViewBeneficiaryInfo" />
+                  <Button fx:id="retrieveBeneficiaryButton" mnemonicParsing="false" onAction="#switchToViewBeneficiaryInfo" text="Retrieve Beneficiary" />
                </children>
             </VBox>
             <Button fx:id="calculateYearlyFees" layoutX="238.0" layoutY="243.0" mnemonicParsing="false" text="Calculate yearly fees" />
-            <Button fx:id="exit" layoutX="282.0" layoutY="291.0" mnemonicParsing="false" text="Exit" onAction="#switchToLoginScreen" />
+            <Button fx:id="exit" layoutX="282.0" layoutY="291.0" mnemonicParsing="false" onAction="#switchToLoginScreen" text="Exit" />
          </children>
       </Pane>
    </content>

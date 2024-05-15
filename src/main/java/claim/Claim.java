@@ -1,6 +1,6 @@
 package claim;
 
-import customers.Customer;
+import users.customers.Customer;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -87,7 +87,11 @@ public class Claim {
     public void setStatus(Status status) {
         this.status = status;
     }
-
+    public void addDocument(String document) {
+        if(!Documents.contains(document)){
+            Documents.add(document);
+        }
+    }
     public ReceiverBankingInfo getReceiverBankingInfo() {
         return receiverBankingInfo;
     }
