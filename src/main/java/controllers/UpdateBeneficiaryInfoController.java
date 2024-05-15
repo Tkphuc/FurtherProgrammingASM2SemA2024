@@ -54,8 +54,16 @@ public class UpdateBeneficiaryInfoController {
         stage.show();
     }
     public void updateBeneficiary(Beneficiary beneficiary){
-        beneficiary.setPhoneNumber(getNewPhoneNumberField());
-        beneficiary.setEmail(getNewEmailField());
-        beneficiary.setAddress(getNewAddressField());
+        if(!getNewPhoneNumberField().isBlank() && getNewPhoneNumberField() != null){
+        beneficiary.setPhoneNumber(getNewPhoneNumberField());}
+
+        if(!getNewEmailField().isBlank() && getNewEmailField() != null){
+        beneficiary.setEmail(getNewEmailField());}
+
+        if(!getNewAddressField().isBlank() && getNewAddressField() != null){
+        beneficiary.setAddress(getNewAddressField());}
+    }
+    public void saveUpdateBeneficiary(ActionEvent event){
+        updateBeneficiary(/*pass beneficiary here*/);
     }
 }

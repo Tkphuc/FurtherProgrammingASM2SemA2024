@@ -4,6 +4,7 @@ import java.util.List;
 
 public class PolicyOwner extends Customer {
     private List<Beneficiary> beneficiaries;
+
     public PolicyOwner(){super();}
     public void FileClaim(){}
     public void UpdateClaim(){}
@@ -14,6 +15,19 @@ public class PolicyOwner extends Customer {
 
     public void GetBeneficiaries(){}
 
-    public void CalculateYearlyFee(){}
+    public double CalculateYearlyFee(){
+    final double DEPENDENT_COST_RATIO = 0.6;
+    double feeSum;
+    BeneficiaryCollection beneficiaryCollection = new BeneficiaryCollection();
+    beneficiaryCollection.setBeneficiaryCollection(beneficiaries);
+    while (beneficiaryCollection.hasNext()){
+        if (beneficiaryCollection.next() instanceof PolicyHolder){
+
+        } else if (beneficiaryCollection.next() instanceof Dependent) {
+
+        }
+    }
+    return feeSum;
+    }
 
 }

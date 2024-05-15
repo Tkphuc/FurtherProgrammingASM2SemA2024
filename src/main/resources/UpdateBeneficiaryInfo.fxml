@@ -22,7 +22,7 @@ fx:controller="controllers.UpdateBeneficiaryInfoController">
             <Label layoutX="49.0" layoutY="233.0" text="New email" />
 
             <Button fx:id="saveButton" layoutX="125.0" layoutY="281.0"
-                    mnemonicParsing="false" text="Save" />
+                    mnemonicParsing="false" text="Save" onAction="#saveUpdateBeneficiary"/>
             <Button fx:id="returnButton" layoutX="314.0" layoutY="281.0"
                     mnemonicParsing="false" text="Return" onAction="#switchToPolicyOwnerMenu" />
 
