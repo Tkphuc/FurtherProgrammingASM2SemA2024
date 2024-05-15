@@ -8,8 +8,6 @@ import java.sql.SQLException;
 import java.sql.Date;
 import java.util.Arrays;
 
-// Assuming Claim and other related classes are part of your model and correctly imported.
-import your_package.Claim; // Make sure to replace 'your_package' with the actual package name where Claim class is located.
 
 public class QueryExecutor {
 
