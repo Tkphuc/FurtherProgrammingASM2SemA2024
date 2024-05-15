@@ -17,6 +17,7 @@ public class RetrieveBeneficiaryClaimMenuController {
     @FXML private Button showButton;
     @FXML private TextField claimIDField;
 
+
     public void switchToPolicyOwnerMenu(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("PolicyOwnerMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -25,5 +26,14 @@ public class RetrieveBeneficiaryClaimMenuController {
         stage.show();
     }
     public String getClaimID(){return claimIDField.getText();}
-    public void
+    public void switchToClaimInformation(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent parent = loader.load(getClass().getResource("ClaimInformation.fxml"));
+        ClaimInformationController claimInformationController = loader.getController();
+        claimInformationController.setClaim();//get claim from claim id entered
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
