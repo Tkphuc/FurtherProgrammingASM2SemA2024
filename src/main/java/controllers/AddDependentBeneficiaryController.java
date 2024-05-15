@@ -1,5 +1,6 @@
 package controllers;
 
+import insurance_card.InsuranceCard;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +19,11 @@ public class AddDependentBeneficiaryController {
     @FXML private Button saveButton;
     @FXML private Button returnButton;
     @FXML private TextField policyHolderOfDependentField;
-
+    private String fullName;
+    private String phoneNumber;
+    private String address;
+    private String email;
+    InsuranceCard insuranceCard;
     public String getPolicyHolderOfDependentField() {
         return policyHolderOfDependentField.getText();
     }
@@ -31,11 +36,43 @@ public class AddDependentBeneficiaryController {
     }
     public Dependent createDependent(){
         Dependent dependent = new Dependent();
-        dependent.setAddress();
-        dependent.setEmail();
-        dependent.setFullName();
+        dependent.setAddress(address);
+        dependent.setEmail(email);
+        dependent.setFullName(fullName);
         dependent.setID();
-        dependent.setPhoneNumber();
+        dependent.setPhoneNumber(phoneNumber);
         dependent.setPassword();
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

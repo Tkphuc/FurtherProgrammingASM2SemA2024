@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import users.customers.Beneficiary;
 
 import java.io.IOException;
 
@@ -44,13 +45,17 @@ public class UpdateBeneficiaryInfoController {
     public String getNewEmailField() {
         return newEmailField.getText();
     }
-    /*
-    public void switchToSystemAdminMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderMenu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
+
+    public void switchToPolicyOwnerMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyOwnerMenu.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
-    }*/
-
+    }
+    public void updateBeneficiary(Beneficiary beneficiary){
+        beneficiary.setPhoneNumber(getNewPhoneNumberField());
+        beneficiary.setEmail(getNewEmailField());
+        beneficiary.setAddress(getNewAddressField());
+    }
 }

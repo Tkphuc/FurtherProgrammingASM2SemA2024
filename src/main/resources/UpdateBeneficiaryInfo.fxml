@@ -24,7 +24,7 @@ fx:controller="controllers.UpdateBeneficiaryInfoController">
             <Button fx:id="saveButton" layoutX="125.0" layoutY="281.0"
                     mnemonicParsing="false" text="Save" />
             <Button fx:id="returnButton" layoutX="314.0" layoutY="281.0"
-                    mnemonicParsing="false" text="Return" onAction="#switchToSystemAdminMenu" />
+                    mnemonicParsing="false" text="Return" onAction="#switchToPolicyOwnerMenu" />
 
             <Label layoutX="33.0" layoutY="27.0" text="Current address"  />
             <Label layoutX="10.0" layoutY="116.0" text="Current phone number" />
