@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="controllers.RetrieveBeneficiaryClaimMenuController">
+   <children>
+      <Button fx:id="returnButton" layoutX="86.0" layoutY="317.0" mnemonicParsing="false" text="Return" onAction="#switchToPolicyOwnerMenu" />
+      <Button fx:id="showButton" layoutX="399.0" layoutY="317.0" mnemonicParsing="false" text="Show" />
+      <Label layoutX="40.0" layoutY="33.0" text="Claim ID" />
+      <TextField fx:id="claimIDField" layoutX="112.0" layoutY="29.0" prefHeight="25.0" prefWidth="452.0" />
+   </children>
+</Pane>

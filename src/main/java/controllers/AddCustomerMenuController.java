@@ -47,8 +47,9 @@ public class AddCustomerMenuController {
             }else {}
         }
     };
-    public void switchToAddBeneficiaryScreen(ActionEvent event){
-        Parent parent = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen1.fxml"));
+    public void switchToAddBeneficiaryScreen(ActionEvent event) throws IOException {
+        FXMLLoader loader =new FXMLLoader();
+        Parent parent = loader.load(getClass().getResource("AddBeneficiaryScreen1.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
@@ -59,7 +60,7 @@ public class AddCustomerMenuController {
         if(chosenType.equalsIgnoreCase(customerTypes[0])){
             customerFactory.createCustomer(chosenType);
         } else if (chosenType.equalsIgnoreCase(customerTypes[1])) {
-            addBeneficiaryScreen1Controller.s
+            addBeneficiaryScreen1Controller.
         } else if (chosenType.equalsIgnoreCase(customerTypes[2])) {
             switchToAddBeneficiaryScreen();
         }

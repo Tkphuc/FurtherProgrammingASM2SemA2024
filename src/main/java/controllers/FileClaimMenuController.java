@@ -2,6 +2,7 @@ package controllers;
 
 import claim.Claim;
 import claim.ClaimBuilder;
+import claim.Status;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +15,6 @@ import other_utilities.DateWrapper;
 import other_utilities.FormatCheck;
 
 import java.io.IOException;
-import java.util.Date;
 
 public class FileClaimMenuController {
     @FXML
@@ -40,7 +40,10 @@ public class FileClaimMenuController {
 
     public void switchToBankingInfoMenu(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.load(getClass().getResource("ViewBanking.fxml"));
+        loader.load(getClass().getResource("FileReceiverBankingInfo.fxml"));
+        FileReceiverBankingInfoController receiverBankingInfoController = loader.getController();
+        receiverBankingInfoController.setNewClaim(createNewClaim());
+
         Parent parent = loader.load();
         Stage  stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
@@ -96,6 +99,7 @@ public class FileClaimMenuController {
     private Claim createNewClaim(){
         if(checkID()){
             newClaim.setInsuredPerson();
+            newClaim.setCardNumber();//get card number from customer
         }
         if(checkDate(getClaimDate())){
             newClaim.setClaimDate(dateWrapper.dateCreate(getClaimDate()));
@@ -103,6 +107,10 @@ public class FileClaimMenuController {
         if(checkDate(getExamDate())){
             newClaim.setExamDate(dateWrapper.dateCreate(getExamDate()));
         }
-        if(checkDate())
+        if(checkDocument(getDocument())){
+            newClaim.addDocument(getDocument());
+        }
+        newClaim.setStatus(Status.NEW);
+        return newClaim;
     }
 }

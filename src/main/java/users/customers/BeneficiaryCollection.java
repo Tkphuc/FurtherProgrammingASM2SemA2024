@@ -16,10 +16,10 @@ public class BeneficiaryCollection implements Collection {
     public void setBeneficiaryCollection(List<Beneficiary> beneficiaryCollection) {
         this.beneficiaryCollection = beneficiaryCollection;
     }
-
+    /*
     public BeneficiaryCollection(List<Beneficiary> surveyorCollection) {
         this.beneficiaryCollection = surveyorCollection;
-    }
+    }*/
 
     public BeneficiaryCollection() {
     }

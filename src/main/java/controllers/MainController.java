@@ -9,7 +9,7 @@ public class MainController {
     private LoginController loginController = new LoginController();
     private PolicyHolderMenuController policyHolderMenuController = new PolicyHolderMenuController();
     private PolicyOwnerMenuController policyOwnerMenuController = new PolicyOwnerMenuController();
-    private ReceiverBankingInfoController receiverBankingInfoController = new ReceiverBankingInfoController();
+    private FileReceiverBankingInfoController receiverBankingInfoController = new FileReceiverBankingInfoController();
     private UpdatePolicyHolderInfoController updatePolicyHolderInfoController = new UpdatePolicyHolderInfoController();
     private UpdateUserInfoController updateUserInfoController = new UpdateUserInfoController();
 
@@ -49,7 +49,7 @@ public class MainController {
         return policyHolderMenuController;
     }
 
-    public ReceiverBankingInfoController getReceiverBankingInfoController() {
+    public FileReceiverBankingInfoController getReceiverBankingInfoController() {
         return receiverBankingInfoController;
     }
 
