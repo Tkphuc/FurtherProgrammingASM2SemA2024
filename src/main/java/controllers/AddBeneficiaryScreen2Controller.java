@@ -1,5 +1,6 @@
 package controllers;
 
+import insurance_card.InsuranceCard;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import users.customers.PolicyHolder;
 
 import java.io.IOException;
 
@@ -18,6 +20,10 @@ public class AddBeneficiaryScreen2Controller {
     @FXML private TextField expirationDateField;
     @FXML private Text beneficiaryIDText;
     @FXML private Text beneficiaryTypeText;
+    String fullName;
+    String phoneNumber;
+    String address;
+    String email;
 
     public void setBeneficiaryTypeText(String beneficiaryTypeText) {
         this.beneficiaryTypeText.setText(beneficiaryTypeText);
@@ -61,6 +67,46 @@ public class AddBeneficiaryScreen2Controller {
     public String getExpirationDate() {
         return expirationDateField.getText();
     }
+    public PolicyHolder createPolicyHolder(){
+        PolicyHolder policyHolder = new PolicyHolder();
+        policyHolder.setAddress(address);
+        policyHolder.setEmail(email);
+        policyHolder.setFullName(fullName);
+        policyHolder.setPhoneNumber(phoneNumber);
+        policyHolder.setPassword();
+        return policyHolder;
+    }
+    public InsuranceCard createInsuranceCard(){
+        InsuranceCard insuranceCard = new InsuranceCard();
+        insuranceCard.setExpirationDate();
+        insuranceCard.setCardID();
+        return insuranceCard;
+    }
+    public PolicyHolder completePolicyHolder(){
+        PolicyHolder policyHolder = createPolicyHolder();
+        policyHolder.setInsuranceCard(createInsuranceCard());
+        return policyHolder;
+    }
+    public InsuranceCard completeInsuranceCard(){
+        InsuranceCard insuranceCard = createInsuranceCard();
+        insuranceCard.setCardHolder(completePolicyHolder());
+        insuranceCard.setPolicyOwner();
+        return insuranceCard;
+    }
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 }

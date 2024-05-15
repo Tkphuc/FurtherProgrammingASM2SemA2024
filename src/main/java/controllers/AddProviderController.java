@@ -23,7 +23,7 @@ public class AddProviderController {
     @FXML private  CheckBox SurveyorTypeChoice;
     @FXML private  Button saveButton;
     @FXML private  Button returnButton;
-    private String[] providerTypes = {"Insurance Manager","Insurance Surveyor"};
+    private final String[] providerTypes = {"Insurance Manager","Insurance Surveyor"};
     private String chosenType;
 
      public String getProviderName(){return providerNameField.getText();}

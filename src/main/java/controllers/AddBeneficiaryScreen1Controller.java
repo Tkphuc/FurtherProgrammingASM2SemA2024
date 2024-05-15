@@ -11,20 +11,21 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import users.customers.Beneficiary;
+import other_utilities.IDGenerator;
 
 import java.io.IOException;
 
 /*https://www.youtube.com/watch?v=hcM-R-YOKkQ*/
 public class AddBeneficiaryScreen1Controller {
 
-    @FXML private TextField expirationDateField;
-    @FXML private TextField beneficiaryTypeField;
     @FXML private TextField beneficiaryNameField;
     @FXML private TextField beneficiaryAddress;
     @FXML private TextField beneficiaryEmail;
     @FXML private TextField beneficiaryPhoneNumber;
     @FXML private CheckBox dependentChoice;
     @FXML private CheckBox policyHolderChoice;
+
 
     public AddBeneficiaryScreen1Controller() {
     }
@@ -38,7 +39,12 @@ public class AddBeneficiaryScreen1Controller {
         } else if (isDependentSelected()) {
             addBeneficiaryScreen2Controller.setBeneficiaryTypeText("Dependent");
         }
-        //addBeneficiaryScreen2Controller.setBeneficiaryIDText(get);
+        addBeneficiaryScreen2Controller.setEmail(getBeneficiaryEmail());
+        addBeneficiaryScreen2Controller.setFullName(getBeneficiaryNameField());
+        addBeneficiaryScreen2Controller.setAddress(getBeneficiaryAddress());
+        addBeneficiaryScreen2Controller.setPhoneNumber(getBeneficiaryPhoneNumber());
+
+        addBeneficiaryScreen2Controller.setBeneficiaryIDText();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -50,14 +56,6 @@ public class AddBeneficiaryScreen1Controller {
         Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
-    }
-
-    public String getExpirationDate() {
-        return expirationDateField.getText();
-    }
-
-    public String getBeneficiaryTypeField() {
-        return beneficiaryTypeField.getText();
     }
 
     public String getBeneficiaryNameField() {
@@ -83,6 +81,5 @@ public class AddBeneficiaryScreen1Controller {
     public boolean isPolicyHolderSelected() {
         return policyHolderChoice.isSelected();
     }
-
 
 }

@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import users.customers.Dependent;
 
 import java.io.IOException;
 
@@ -27,5 +28,14 @@ public class AddDependentBeneficiaryController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public Dependent createDependent(){
+        Dependent dependent = new Dependent();
+        dependent.setAddress();
+        dependent.setEmail();
+        dependent.setFullName();
+        dependent.setID();
+        dependent.setPhoneNumber();
+        dependent.setPassword();
     }
 }
