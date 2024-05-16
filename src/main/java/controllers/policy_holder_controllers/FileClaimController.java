@@ -1,5 +1,7 @@
 package controllers.policy_holder_controllers;
 
+import claim.Claim;
+import claim.Status;
 import controllers.policy_owner_controllers.FileReceiverBankingInfoController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -76,5 +78,30 @@ public class FileClaimController {
         if (formatCheck.documentNameCheck(document) != null){
             return true;
         }else {return false;}
+    }
+
+    public void setNewClaim(Claim newClaim) {
+        this.newClaim = newClaim;
+    }
+    public Claim saveNeClaim(){
+        setClaimBankingInfo();
+        return this.newClaim;
+    }
+    private Claim createNewClaim(){
+        if(checkID()){
+            newClaim.setInsuredPerson();
+            newClaim.setCardNumber();//get card number from customer
+        }
+        if(checkDate(getClaimDate())){
+            newClaim.setClaimDate(dateWrapper.dateCreate(getClaimDate()));
+        }
+        if(checkDate(getExamDate())){
+            newClaim.setExamDate(dateWrapper.dateCreate(getExamDate()));
+        }
+        if(checkDocument(getDocument())){
+            newClaim.addDocument(getDocument());
+        }
+        newClaim.setStatus(Status.NEW);
+        return newClaim;
     }
 }

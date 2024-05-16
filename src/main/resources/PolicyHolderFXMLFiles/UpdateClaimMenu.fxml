@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.policy_holder_controllers.UpdateClaimMenuController">
+   <children>
+      <Button fx:id="returnButton" layoutX="75.0" layoutY="362.0" mnemonicParsing="false" text="Return" />
+      <Button fx:id="nextButton" layoutX="450.0" layoutY="362.0" mnemonicParsing="false" text="Next" />
+      <Label layoutX="24.0" layoutY="22.0" text="claim ID" />
+      <Label layoutX="21.0" layoutY="94.0" text="New Claim Date" />
+      <Label layoutX="23.0" layoutY="160.0" text="New Exam date" />
+      <Label layoutX="14.0" layoutY="192.0" text="Current Receiver Name" />
+      <Label layoutX="14.0" layoutY="247.0" text="Current Receiver Bank" />
+      <Label layoutX="10.0" layoutY="298.0" text="Current Receiver Account Number" />
+      <TextField fx:id="newClaimDateField" layoutX="130.0" layoutY="90.0" prefHeight="25.0" prefWidth="449.0" />
+      <TextField fx:id="newExamDateField" layoutX="126.0" layoutY="156.0" prefHeight="25.0" prefWidth="457.0" />
+      <Label layoutX="19.0" layoutY="221.0" text="New Receiver Name" />
+      <Label layoutX="15.0" layoutY="274.0" text="New Receiver Bank" />
+      <Label layoutX="10.0" layoutY="329.0" text="New Receiver Account Number" />
+      <Text fx:id="claimIDText" layoutX="263.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Label layoutX="17.0" layoutY="125.0" text="Current Exam Date" />
+      <Text fx:id="currentExamDateField" layoutX="263.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Label layoutX="22.0" layoutY="52.0" text="Current Claim Date" />
+      <Text fx:id="currentClaimIDText" layoutX="263.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="currentReceiverNameText" layoutX="274.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="currentReceiverBankText" layoutX="274.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="currentReceiverAccountNumber" layoutX="274.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <TextField fx:id="newReceiverNameField" layoutX="137.0" layoutY="217.0" prefHeight="25.0" prefWidth="440.0" />
+      <TextField fx:id="newReceiverBankField" layoutX="131.0" layoutY="270.0" prefHeight="25.0" prefWidth="449.0" />
+      <TextField fx:id="newReceiverAccountNumberField" layoutX="190.0" layoutY="325.0" prefHeight="25.0" prefWidth="401.0" />
+   </children>
+</Pane>
