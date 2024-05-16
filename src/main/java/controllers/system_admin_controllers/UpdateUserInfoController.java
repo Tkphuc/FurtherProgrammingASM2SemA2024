@@ -1,4 +1,4 @@
-package controllers;
+package controllers.system_admin_controllers;
 
 import controllers.policy_owner_controllers.UpdateBeneficiaryInfoController;
 import javafx.fxml.FXML;

@@ -12,7 +12,7 @@
       prefHeight="400.0" prefWidth="600.0"
       xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="controllers.UpdateInsuranceCardMenuController">
+fx:controller="controllers.system_admin_controllers.UpdateInsuranceCardMenuController">
    <children>
       <Button fx:id="returnButton" layoutX="127.0" layoutY="314.0" mnemonicParsing="false" text="Return" onAction="#switchToSystemAdminMenu" />
       <Button fx:id="saveButton" layoutX="387.0" layoutY="314.0" mnemonicParsing="false" text="Save" />

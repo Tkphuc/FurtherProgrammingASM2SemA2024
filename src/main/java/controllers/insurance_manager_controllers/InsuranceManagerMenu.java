@@ -34,7 +34,7 @@ public class InsuranceManagerMenu {
     }
     public void switchToApproveClaimMenu(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.load(getClass().getResource("ApproveClaim.fxml"));
+        loader.load(getClass().getResource("InsuranceManagerFXMLFiles/ApproveClaim.fxml"));
         Parent parent = loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);

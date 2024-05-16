@@ -1,4 +1,4 @@
-package controllers;
+package controllers.policy_owner_controllers;
 
 import claim.Claim;
 import claim.ReceiverBankingInfo;

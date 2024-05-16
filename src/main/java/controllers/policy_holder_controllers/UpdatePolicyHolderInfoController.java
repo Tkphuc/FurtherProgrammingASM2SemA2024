@@ -1,4 +1,4 @@
-package controllers;
+package controllers.policy_holder_controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

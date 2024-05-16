@@ -1,4 +1,4 @@
-package controllers;
+package controllers.system_admin_controllers;
 
 import insurance_card.InsuranceCard;
 import javafx.event.ActionEvent;

@@ -1,4 +1,4 @@
-package controllers;
+package controllers.policy_owner_controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -70,7 +70,7 @@ public class ConfirmNewClaimInfo1Controller {
     }
     public void switchToConfirmNewClamInfo2(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Parent parent = loader.load(getClass().getResource("ConfirmNewClaimInfo2.fxml"));
+        Parent parent = loader.load(getClass().getResource("PolicyOwnerFXMLFiles/ConfirmNewClaimInfo2.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
