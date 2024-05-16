@@ -1,6 +1,5 @@
 package controllers;
 
-import claim.Claim;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -63,7 +62,7 @@ public class ConfirmNewClaimInfo1Controller {
     }
     public void switchToReceiverBankingInfo(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Parent parent = loader.load(getClass().getResource("FileReceiverBankingInfo.fxml"));
+        Parent parent = loader.load(getClass().getResource("PolicyOwnerFXMLFiles/FileReceiverBankingInfo.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
          Scene scene = new Scene(parent);
         stage.setScene(scene);

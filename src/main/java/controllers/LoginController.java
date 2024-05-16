@@ -108,7 +108,7 @@ public class LoginController {
                   case InsuranceManager insuranceManager -> {
                       Parent root = null;
                       try {
-                          root = FXMLLoader.load(getClass().getResource("controllers.InsuranceManagerMenu.fxml"));
+                          root = FXMLLoader.load(getClass().getResource("controllers.insurance_manager_controllers.InsuranceManagerMenu.fxml"));
                       } catch (IOException e) {
                           throw new RuntimeException(e);
                       }
@@ -120,7 +120,7 @@ public class LoginController {
                   case InsuranceSurveyor insuranceSurveyor -> {
                       Parent root = null;
                       try {
-                          root = FXMLLoader.load(getClass().getResource("controllers.InsuranceSurveyorMenu.fxml"));
+                          root = FXMLLoader.load(getClass().getResource("controllers.insurance_surveyor_controllers.InsuranceSurveyorMenu.fxml"));
                       } catch (IOException e) {
                           throw new RuntimeException(e);
                       }
@@ -169,14 +169,14 @@ public class LoginController {
         stage.show();
     }
     public void switchToInsuranceManagerMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("controllers.InsuranceManagerMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("controllers.insurance_manager_controllers.InsuranceManagerMenu.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void switchToInsuranceSurveyorMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("controllers.InsuranceSurveyorMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("controllers.insurance_surveyor_controllers.InsuranceSurveyorMenu.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
