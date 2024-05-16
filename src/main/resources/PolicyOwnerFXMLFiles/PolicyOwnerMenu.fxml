@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane text="Policy Owner Menu" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.policy_owner_controllers.PolicyOwnerMenuController">
+   <content>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox fx:id="claimFunctions" layoutX="118.0" layoutY="81.0" prefHeight="136.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="fileClaim" mnemonicParsing="false" onAction="#switchToFileClaimMenu" prefHeight="26.0" prefWidth="101.0" text="File claim">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="updateClaim" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Update claim">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="retrieveClaim" mnemonicParsing="false" onAction="#switchToClaimInformationMenu" prefHeight="26.0" prefWidth="101.0" text="Retrieve claim">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="deleteClaim" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Delete claim" />
+               </children>
+            </VBox>
+            <VBox fx:id="beneficiaryFunctions" layoutX="349.0" layoutY="81.0" prefHeight="136.0" prefWidth="123.0">
+               <children>
+                  <Button fx:id="addBeneficiary" mnemonicParsing="false" onAction="#switchToAddBeneficiaryScreen1" text="Add beneficiary">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="updateBeneficiary" mnemonicParsing="false" text="Update beneficiary">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="removeBeneficiary" mnemonicParsing="false" text="Remove Beneficiary">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="retrieveBeneficiaryButton" mnemonicParsing="false" onAction="#switchToViewBeneficiaryInfo" text="Retrieve Beneficiary" />
+               </children>
+            </VBox>
+            <Button fx:id="calculateYearlyFees" layoutX="238.0" layoutY="243.0" mnemonicParsing="false" text="Calculate yearly fees" />
+            <Button fx:id="exit" layoutX="282.0" layoutY="291.0" mnemonicParsing="false" onAction="#switchToLoginScreen" text="Exit" />
+         </children>
+      </Pane>
+   </content>
+</TitledPane>

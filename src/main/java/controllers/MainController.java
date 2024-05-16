@@ -21,7 +21,7 @@ public class MainController {
         return dependentMenuController;
     }
 
-    public controllers.AddBeneficiaryScreen1Controller getAddBeneficiaryController() {
+    public controllers.policy_owner_controllers.AddBeneficiaryScreen1Controller getAddBeneficiaryController() {
         return AddBeneficiaryScreen1Controller;
     }
 
