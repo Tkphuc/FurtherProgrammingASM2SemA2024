@@ -44,7 +44,7 @@ public class PolicyHolderMenuController {
         stage.show();
     }
     public void switchToGetSelfInfo(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("ViewBeneficiaryInfo.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(parent);
         stage.setScene(scene);
