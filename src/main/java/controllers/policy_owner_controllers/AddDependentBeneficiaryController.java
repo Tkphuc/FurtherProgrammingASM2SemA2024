@@ -28,7 +28,7 @@ public class AddDependentBeneficiaryController {
         return policyHolderOfDependentField.getText();
     }
     public void switchToAddBeneficiaryScreen2(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen2.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("PolicyOwnerFXMLFiles/AddBeneficiaryScreen2.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

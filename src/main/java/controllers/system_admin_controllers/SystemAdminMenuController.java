@@ -30,7 +30,7 @@ public class SystemAdminMenuController {
     }
     @FXML
     public void switchToUpdateUserMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("UpdateUserInfo.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/UpdateUserInfo.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
@@ -38,7 +38,7 @@ public class SystemAdminMenuController {
     }
     @FXML
     public void switchToAddProviderMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("AddProviderMenu.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/AddProviderMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
@@ -46,14 +46,14 @@ public class SystemAdminMenuController {
     }
     @FXML
     public void switchToAddCustomerMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("AddCustomerMenu.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/AddCustomerMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }
     public void switchToUpdateInsuranceCardMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("UpdateInsuranceCardMenu.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/UpdateInsuranceCardMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

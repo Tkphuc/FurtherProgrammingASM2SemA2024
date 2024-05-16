@@ -19,7 +19,7 @@ public class RetrieveBeneficiaryClaimMenuController {
 
 
     public void switchToPolicyOwnerMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("PolicyOwnerMenu.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyOwnerFXMLFiles/PolicyOwnerMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

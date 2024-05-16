@@ -33,7 +33,7 @@ public class AddBeneficiaryScreen2Controller {
     }
 
     public void switchToAddBeneficiaryScreen1(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("PolicyOwnerFXMLFiles/AddBeneficiaryScreen1.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -42,7 +42,7 @@ public class AddBeneficiaryScreen2Controller {
 
     public void switchToAddNextScenceOrSave(ActionEvent event) throws IOException {
         if(beneficiaryTypeText.getText().equalsIgnoreCase("Dependent")){
-            FXMLLoader loader = FXMLLoader.load(getClass().getResource("AddBeneficiaryDependent.fxml"));
+            FXMLLoader loader = FXMLLoader.load(getClass().getResource("PolicyOwnerFXMLFiles/AddBeneficiaryDependent.fxml"));
             Parent root = loader.load();
             AddDependentBeneficiaryController addDependentBeneficiaryController = loader.getController();
             addDependentBeneficiaryController.setAddress(this.address);

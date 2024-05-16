@@ -27,7 +27,7 @@ public class AddBeneficiaryScreen1Controller {
     }
 
     public void switchToAddBeneficiaryScreen2(ActionEvent event) throws IOException {
-        FXMLLoader loader = FXMLLoader.load(getClass().getResource("AddBeneficiaryScreen2.fxml"));
+        FXMLLoader loader = FXMLLoader.load(getClass().getResource("PolicyOwnerFXMLFiles/AddBeneficiaryScreen2.fxml"));
         Parent root = loader.load();
         AddBeneficiaryScreen2Controller addBeneficiaryScreen2Controller = loader.getController();
         if(isPolicyHolderSelected()){
@@ -47,7 +47,7 @@ public class AddBeneficiaryScreen1Controller {
         stage.show();
     }
     public void switchToPolicyOwnerMenu(ActionEvent event) throws IOException{
-        Parent parent = FXMLLoader.load(getClass().getResource("PolicyOwnerMenu.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyOwnerFXMLFiles/PolicyOwnerMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

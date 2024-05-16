@@ -22,7 +22,7 @@ public class FileReceiverBankingInfoController {
     @FXML private  Button saveButton;
     private Claim newClaim;
     public void switchToFileClaimMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("FileClaim.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyOwnerFXMLFiles/FileClaim.fxml"));
         Stage   stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

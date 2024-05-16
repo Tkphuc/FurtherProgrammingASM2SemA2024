@@ -60,7 +60,7 @@ public class UpdateDependentInfoController {
     }
 
     public void switchToPolicyHolderMenuController(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderMenu.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/PolicyHolderMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

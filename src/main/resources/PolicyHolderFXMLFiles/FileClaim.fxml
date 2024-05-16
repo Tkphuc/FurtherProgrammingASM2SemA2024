@@ -9,13 +9,14 @@
             text="File new claim"
             xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.policy_owner_controllers.FileClaimMenuController">
+            fx:controller="controllers.policy_holder_controllers.FileClaimController"
+>
    <content>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Button fx:id="returnButton" layoutX="168.0" layoutY="331.0" mnemonicParsing="false" onAction="#switchPolicyOwnerMenu" text="Return" />
-            <Button fx:id="nextButton" layoutX="404.0" layoutY="331.0" mnemonicParsing="false" onAction="#switchToBankingInfoMenu" text="Next" />
-            <TextField fx:id="claimAmountField" layoutX="255.0" layoutY="94.0" />
+            <Button fx:id="returnButton" layoutX="168.0" layoutY="331.0" mnemonicParsing="false"  text="Return" />
+            <Button fx:id="nextButton" layoutX="404.0" layoutY="331.0" mnemonicParsing="false"  text="Next" />
+            <TextField fx:id="claimAmountField" layoutX="255.0" layoutY="94.0"/>
             <TextField fx:id="examDateField" layoutX="245.0" layoutY="137.0" />
             <TextField fx:id="claimDateField" layoutX="245.0" layoutY="183.0" />
             <Label layoutX="90.0" layoutY="111.0" text="Claim Amount" />

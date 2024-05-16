@@ -25,7 +25,7 @@ public class UpdateInsuranceCardMenuController {
     private DateWrapper dateWrapper = new DateWrapper();
     private InsuranceCard insuranceCard;
     public void switchToSystemAdminMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderMenu.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/SystemAdminMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

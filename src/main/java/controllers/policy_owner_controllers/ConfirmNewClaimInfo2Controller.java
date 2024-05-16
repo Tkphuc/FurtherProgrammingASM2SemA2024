@@ -17,7 +17,7 @@ public class ConfirmNewClaimInfo2Controller {
 
     public void switchToConfirmNewClamInfo1(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.load(getClass().getResource("ConfirmNewClaimInfo1.fxml"));
+        loader.load(getClass().getResource("PolicyOwnerFXMLFiles/confirmNewClaimInfo1.fxml"));
         Parent parent = loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
