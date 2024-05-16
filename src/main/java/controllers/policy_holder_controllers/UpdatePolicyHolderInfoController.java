@@ -14,12 +14,14 @@ import users.customers.PolicyHolder;
 import java.io.IOException;
 
 public class UpdatePolicyHolderInfoController {
+    @FXML private TextField newPasswordField;
     @FXML private TextField newAddressField;
     @FXML private TextField newPhoneNumberField;
     @FXML private TextField newEmailField;
     @FXML private Text currentAddress;
     @FXML private Text currentPhoneNumber;
     @FXML private Text currentEmail;
+    @FXML private Text currentPasswordText;
     @FXML
     private Stage stage;
     @FXML private Scene scene;
@@ -40,6 +42,7 @@ public class UpdatePolicyHolderInfoController {
     public void setCurrentEmail(){
         currentEmail.setText(policyHolder.getEmail());
     }
+    public void setCurrentPassword(){currentPasswordText.setText(policyHolder.getPassword());}
     public String getNewAddress(){
         return newAddressField.getText();
     }
@@ -49,6 +52,7 @@ public class UpdatePolicyHolderInfoController {
     public String getNewEmail(){
         return newEmailField.getText();
     }
+    public String getNewPassword(){return newPasswordField.getText();}
     public void updatePolicyHolder(){
 
     }
