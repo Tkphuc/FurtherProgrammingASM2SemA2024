@@ -26,7 +26,7 @@
                 <Text fx:id="claimDate" layoutX="177.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                 <Text fx:id="status" layoutX="177.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
             <Text fx:id="claimIDText" layoutX="177.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Button fx:id="nextButton" layoutX="443.0" layoutY="335.0" mnemonicParsing="false" text="Next" />
+            <Button fx:id="nextButton" layoutX="443.0" layoutY="335.0" mnemonicParsing="false" text="Next" onAction="#switchToViewBankingInfo" />
             </children>
         </Pane>
     </content>

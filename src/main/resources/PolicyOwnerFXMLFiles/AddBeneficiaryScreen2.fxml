@@ -10,7 +10,7 @@ If not, what format does it follow - beside what was in asm1 requirements
 !-->
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="controllers.policy_owner_controllers.AddBeneficiaryScreen2Controller">
+      fx:controller="controllers.policy_owner_controllers.beneficiary_controllers.AddBeneficiaryScreen2Controller">
    <children>
       <TextField fx:id="cardIDField" layoutX="152.0" layoutY="162.0" prefHeight="25.0" prefWidth="397.0" />
       <Label layoutX="25.0" layoutY="166.0" text="Insurance Card ID" />

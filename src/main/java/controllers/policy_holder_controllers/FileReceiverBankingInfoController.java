@@ -1,5 +1,6 @@
 package controllers.policy_holder_controllers;
 
+import claim.Claim;
 import claim.ReceiverBankingInfo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,11 +13,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class FileReceiveBankingInfoController {
+public class FileReceiverBankingInfoController {
     @FXML private TextField bankNameField;
     @FXML private TextField receiverNameField;
     @FXML private TextField accountNumberField;
-
+    private Claim newClaim;
     public String getBankName() {
         return bankNameField.getText();
     }
@@ -41,5 +42,13 @@ public class FileReceiveBankingInfoController {
         Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
+    }
+    public void setClaimBankingInfo(Claim claim){
+        this.newClaim = claim;
+        this.newClaim.setReceiverBankingInfo(new ReceiverBankingInfo(getBankName(),getReceiverName(),getAccountNumber()));
+    }
+    public Claim saveClaimToDatabase(){
+        //save to Database
+        return this.newClaim;
     }
 }

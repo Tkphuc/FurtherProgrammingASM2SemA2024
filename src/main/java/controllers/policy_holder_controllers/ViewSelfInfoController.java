@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import users.customers.PolicyHolder;
 
 import java.io.IOException;
 
@@ -17,7 +18,7 @@ public class ViewSelfInfoController {
     @FXML private Text addressText;
     @FXML private Text emailText;
     @FXML private Text phoneNumberText;
-
+    private PolicyHolder policyHolder;
     public void setIDText(String IDText) {
         this.IDText.setText(IDText);
     }
@@ -37,6 +38,15 @@ public class ViewSelfInfoController {
     public void setEmailText(String emailText) {
         this.emailText.setText(emailText);
     }
+
+    public PolicyHolder getPolicyHolder() {
+        return policyHolder;
+    }
+
+    public void setPolicyHolder(PolicyHolder policyHolder) {
+        this.policyHolder = policyHolder;
+    }
+
     public void switchToPolicyOwnerMenu(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/PolicyHolderMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();

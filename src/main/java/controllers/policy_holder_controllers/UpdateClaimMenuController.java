@@ -1,5 +1,6 @@
 package controllers.policy_holder_controllers;
 
+import claim.Claim;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -18,6 +19,8 @@ public class UpdateClaimMenuController {
     @FXML private Text currentReceiverNameText;
     @FXML private Text currentReceiverBankText;
     @FXML private Text currentReceiverAccountNumber;
+
+    private Claim claim;
 
     public void setClaimIDText(String claimIDText) {
         this.claimIDText.setText(claimIDText);
@@ -63,4 +66,11 @@ public class UpdateClaimMenuController {
         return newReceiverAccountNumberField.getText();
     }
 
+    public Claim getClaim() {
+        return claim;
+    }
+
+    public void setClaim(Claim claim) {
+        this.claim = claim;
+    }
 }

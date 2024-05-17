@@ -1,6 +1,6 @@
 package controllers.system_admin_controllers;
 
-import controllers.policy_owner_controllers.UpdateBeneficiaryInfoController;
+import controllers.policy_owner_controllers.beneficiary_controllers.UpdateBeneficiaryInfoController;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;

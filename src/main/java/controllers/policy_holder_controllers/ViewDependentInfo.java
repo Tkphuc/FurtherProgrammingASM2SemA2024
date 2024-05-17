@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import users.customers.Dependent;
 
 import java.io.IOException;
 
@@ -20,7 +21,7 @@ public class ViewDependentInfo {
     @FXML private Text addressText;
     @FXML private Text emailText;
     @FXML private Text phoneNumberText;
-
+    private Dependent dependent;
     public void setPolicyHolderIDText(String policyHolderIDText) {
         this.PolicyHolderIDText.setText(policyHolderIDText);
     }
@@ -43,6 +44,14 @@ public class ViewDependentInfo {
 
     public String getBeneficiaryIDField() {
         return beneficiaryIDField.getText();
+    }
+
+    public Dependent getDependent() {
+        return dependent;
+    }
+
+    public void setDependent(Dependent dependent) {
+        this.dependent = dependent;
     }
 
     public void switchToPolicyOwnerMenu(ActionEvent event) throws IOException {

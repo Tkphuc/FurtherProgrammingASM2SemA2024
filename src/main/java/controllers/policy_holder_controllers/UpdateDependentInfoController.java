@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import users.customers.Dependent;
 
 import java.io.IOException;
 
@@ -22,7 +23,7 @@ public class UpdateDependentInfoController {
     @FXML private Text currentAddressText;
     @FXML private Text currentEmailText;
     @FXML private Text currentPasswordText;
-
+    private Dependent dependent;
     public String getDependentIDField() {
         return dependentIDField.getText();
     }
@@ -65,5 +66,13 @@ public class UpdateDependentInfoController {
         Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public Dependent getDependent() {
+        return dependent;
+    }
+
+    public void setDependent(Dependent dependent) {
+        this.dependent = dependent;
     }
 }

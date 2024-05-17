@@ -10,7 +10,7 @@
             text="users.customers.Beneficiary Information"
             xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.policy_owner_controllers.ViewBeneficiaryInfoController">
+            fx:controller="controllers.policy_owner_controllers.beneficiary_controllers.ViewBeneficiaryInfoController">
    <content>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>

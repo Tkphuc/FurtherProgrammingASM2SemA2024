@@ -9,7 +9,7 @@
             text="File new claim"
             xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.policy_owner_controllers.FileClaimMenuController">
+            fx:controller="controllers.policy_owner_controllers.calim_controllers.FileClaimMenuController">
    <content>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>

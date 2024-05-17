@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import users.providers.InsuranceManager;
 
 import java.io.IOException;
 
@@ -19,8 +20,17 @@ public class InsuranceManagerMenuController {
     @FXML private Button exitButton;
     @FXML private Button retrieveAllClaimsButton;
     @FXML private Button approveMenuButton;
-;
+    private InsuranceManager insuranceManager;
+
     public InsuranceManagerMenuController() {
+    }
+
+    public InsuranceManager getInsuranceManager() {
+        return insuranceManager;
+    }
+
+    public void setInsuranceManager(InsuranceManager insuranceManager) {
+        this.insuranceManager = insuranceManager;
     }
 
     public void switchToLoginScreen(ActionEvent event) throws IOException {

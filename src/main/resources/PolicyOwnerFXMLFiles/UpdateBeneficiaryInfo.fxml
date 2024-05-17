@@ -9,7 +9,7 @@
             text="Update Personal Information - Policy Holder"
             xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/21"
-fx:controller="controllers.policy_owner_controllers.UpdateBeneficiaryInfoController">
+fx:controller="controllers.policy_owner_controllers.beneficiary_controllers.UpdateBeneficiaryInfoController">
    <content>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>

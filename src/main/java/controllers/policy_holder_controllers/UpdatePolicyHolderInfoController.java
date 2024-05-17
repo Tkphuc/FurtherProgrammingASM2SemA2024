@@ -33,6 +33,7 @@ public class UpdatePolicyHolderInfoController {
         stage.setScene(scene);
         stage.show();
     }
+
     public void setCurrentAddress(){
         currentAddress.setText(policyHolder.getAddress());
     }
@@ -43,6 +44,7 @@ public class UpdatePolicyHolderInfoController {
         currentEmail.setText(policyHolder.getEmail());
     }
     public void setCurrentPassword(){currentPasswordText.setText(policyHolder.getPassword());}
+
     public String getNewAddress(){
         return newAddressField.getText();
     }
@@ -53,6 +55,15 @@ public class UpdatePolicyHolderInfoController {
         return newEmailField.getText();
     }
     public String getNewPassword(){return newPasswordField.getText();}
+
+    public PolicyHolder getPolicyHolder() {
+        return policyHolder;
+    }
+
+    public void setPolicyHolder(PolicyHolder policyHolder) {
+        this.policyHolder = policyHolder;
+    }
+
     public void updatePolicyHolder(){
 
     }

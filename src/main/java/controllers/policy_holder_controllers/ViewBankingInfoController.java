@@ -1,5 +1,6 @@
 package controllers.policy_holder_controllers;
 
+import claim.Claim;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,17 +16,20 @@ public class ViewBankingInfoController {
    @FXML private Text bankName;
     @FXML private Text receiverName;
     @FXML private Text accountNumber;
-
-    public void setBankName(Text bankName) {
-        this.bankName = bankName;
+    private Claim claim;
+    public void setBankName() {
+        this.bankName.setText(claim.getReceiverBankingInfo().getBank());
     }
 
-    public void setReceiverName(Text receiverName) {
-        this.receiverName = receiverName;
+    public void setReceiverName() {
+        this.receiverName.setText(claim.getReceiverBankingInfo().getName());
     }
 
     public void setAccountNumber(Text accountNumber) {
-        this.accountNumber = accountNumber;
+        this.accountNumber.setText(claim.getReceiverBankingInfo().getNumber());
+    }
+    public void setClaim(Claim claim) {
+        this.claim = claim;
     }
     public void switchToRetrieveClaimMenu(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/RetrieveClaimMenu.fxml"));
@@ -34,10 +38,16 @@ public class ViewBankingInfoController {
         stage.setScene(scene);
         stage.show();
     }public void switchToShowDocument(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/ShowDocuments.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.load(getClass().getResource("PolicyHolderFXMLFiles/ShowDocuments.fxml"));
+        ShowDocumentController showDocumentController = loader.getController();
+        showDocumentController.setClaim(claim);
+        Parent parent = loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }
+
+
 }

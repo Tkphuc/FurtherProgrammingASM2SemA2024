@@ -1,5 +1,10 @@
 package controllers;
 
+import controllers.insurance_manager_controllers.InsuranceManagerMenuController;
+import controllers.insurance_surveyor_controllers.InsuranceSurveyorMenuController;
+import controllers.policy_holder_controllers.PolicyHolderMenuController;
+import controllers.policy_owner_controllers.PolicyOwnerMenuController;
+import controllers.dependent_controllers.DependentMenuController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -67,7 +72,10 @@ public class LoginController {
                   case PolicyOwner policyOwner -> {
                       Parent root = null;
                       try {
-                          root = FXMLLoader.load(getClass().getResource("PolicyOwnerMenu.fxml"));
+                          FXMLLoader loader = new FXMLLoader();
+                          loader.getClass().getResource("PolicyOwnerFXMLFiles/PolicyOwnerMenu.fxml");
+                          PolicyOwnerMenuController policyOwnerMenuController = loader.getController();
+                          root = loader.load();
                       } catch (IOException e) {
                           throw new RuntimeException(e);
                       }
@@ -79,7 +87,11 @@ public class LoginController {
                   case PolicyHolder policyHolder -> {
                       Parent root = null;
                       try {
-                          root = FXMLLoader.load(getClass().getResource("PolicyHolderMenu.fxml"));
+                          FXMLLoader loader = new FXMLLoader();
+                          loader.getClass().getResource("PolicyHolderFXMLFiles/PolicyHolderMenu.fxml");
+                          PolicyHolderMenuController policyHolderMenuController = loader.getController();
+                          policyHolderMenuController.setPolicyHolder((PolicyHolder) user);
+                          root = loader.load();;
                       } catch (IOException e) {
                           throw new RuntimeException(e);
                       }
@@ -91,7 +103,11 @@ public class LoginController {
                   case Dependent dependent -> {
                       Parent root = null;
                       try {
-                          root = FXMLLoader.load(getClass().getResource("DependentMenu.fxml"));
+                          FXMLLoader loader = new FXMLLoader();
+                          loader.getClass().getResource("DependentFXMLFiles/DependentMenu.fxml");
+                          DependentMenuController dependentMenuController = loader.getController();
+                          dependentMenuController.setDependent((Dependent) user);
+                          root = loader.load();
                       } catch (IOException e) {
                           throw new RuntimeException(e);
                       }
@@ -108,7 +124,11 @@ public class LoginController {
                   case InsuranceManager insuranceManager -> {
                       Parent root = null;
                       try {
-                          root = FXMLLoader.load(getClass().getResource("controllers.insurance_manager_controllers.InsuranceManagerMenuController.fxml"));
+                          FXMLLoader loader = new FXMLLoader();
+                          loader.getClass().getResource("InsuranceManagerFXMLFiles/InsuranceManagerMenu.fxml");
+                          InsuranceManagerMenuController insuranceManagerMenuController= loader.getController();
+                          insuranceManagerMenuController.setInsuranceManager((InsuranceManager) user);
+                          root = loader.load();
                       } catch (IOException e) {
                           throw new RuntimeException(e);
                       }
@@ -120,7 +140,12 @@ public class LoginController {
                   case InsuranceSurveyor insuranceSurveyor -> {
                       Parent root = null;
                       try {
-                          root = FXMLLoader.load(getClass().getResource("controllers.insurance_surveyor_controllers.InsuranceSurveyorMenuController.fxml"));
+                          FXMLLoader loader = new FXMLLoader();
+                          loader.getClass().getResource("InsuranceSurveyorFXMLFiles/InsuranceSurveyorMenu.fxml");
+                          InsuranceSurveyorMenuController insuranceSurveyorMenuController= loader.getController();
+                          insuranceSurveyorMenuController.setInsuranceManager((InsuranceManager) user);
+                          root = loader.load();
+
                       } catch (IOException e) {
                           throw new RuntimeException(e);
                       }
@@ -147,46 +172,5 @@ public class LoginController {
       }
 
     }
-     /*
-    public void switchToPolicyOwnerMenu() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("PolicyOwnerMenu.fxml"));
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void switchToPolicyHolderMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("PolicyHolderMenu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void switchToDependentMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("DependentMenu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void switchToInsuranceManagerMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("controllers.insurance_manager_controllers.InsuranceManagerMenuController.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void switchToInsuranceSurveyorMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("controllers.insurance_surveyor_controllers.InsuranceSurveyorMenuController.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void switchToSystemAdminMenu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("SystemAdminMenuController.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }*/
+
 }

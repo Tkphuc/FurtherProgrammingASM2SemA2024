@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import users.customers.Dependent;
 
 import java.io.IOException;
 
@@ -22,8 +23,17 @@ public class DependentMenuController {
     @FXML private VBox dependentFunctions;
     @FXML private Button retrieveClaim;
     @FXML private Button retrieveInfo;
+    private Dependent dependent;
 
     public DependentMenuController() {
+    }
+
+    public Dependent getDependent() {
+        return dependent;
+    }
+
+    public void setDependent(Dependent dependent) {
+        this.dependent = dependent;
     }
 
     public void switchToLoginScreen(ActionEvent event) throws IOException {

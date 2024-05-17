@@ -1,5 +1,7 @@
 package Database;
 
+import claim.Claim;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,13 +33,13 @@ public class QueryExecutor {
         try (PreparedStatement pstmt = conn.prepareStatement(SQL)) {
             pstmt.setString(1, claim.getClaimID());
             pstmt.setDate(2, new Date(claim.getClaimDate().getTime()));
-            pstmt.setString(3, claim.getInsuredPerson().getCustomerID()); // Ensure InsuredPerson class has getCustomerID method
+            pstmt.setString(3, claim.getInsuredPerson().getID()); // Ensure InsuredPerson class has getCustomerID method
             pstmt.setString(4, claim.getCardNumber());
             pstmt.setDate(5, new Date(claim.getExamDate().getTime()));
             // Assuming getDocuments returns a List<String>
             pstmt.setArray(6, conn.createArrayOf("text", claim.getDocuments().toArray(new String[0])));
             pstmt.setDouble(7, claim.getClaimAmount());
-            pstmt.setString(8, claim.getStatus()); // Assuming getStatus returns a String
+            pstmt.setString(8, claim.getStatusAsString()); // Assuming getStatus returns a String
             pstmt.setString(9, claim.getReceiverBankingInfo().getBankingInfoID()); // Ensure ReceiverBankingInfo class has getBankingInfoID method
 
             pstmt.executeUpdate();

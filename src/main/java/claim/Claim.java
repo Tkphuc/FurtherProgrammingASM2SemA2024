@@ -83,6 +83,7 @@ public class Claim {
     public Status getStatus() {
         return status;
     }
+    public String getStatusAsString(){return status.toString();}
 
     public void setStatus(Status status) {
         this.status = status;

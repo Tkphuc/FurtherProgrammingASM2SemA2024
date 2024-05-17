@@ -2,7 +2,7 @@ package controllers.policy_holder_controllers;
 
 import claim.Claim;
 import claim.Status;
-import controllers.policy_owner_controllers.FileReceiverBankingInfoController;
+import controllers.policy_owner_controllers.calim_controllers.FileReceiverBankingInfoController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,6 +25,7 @@ public class FileClaimController {
     @FXML private TextField documentField;
     private FormatCheck formatCheck;
     private DateWrapper dateWrapper;
+    private Claim newClaim;
 
     public Double getClaimAmount() {
         return Double.parseDouble(claimAmountField.getText());
@@ -45,7 +46,7 @@ public class FileClaimController {
         FXMLLoader loader = new FXMLLoader();
         loader.load(getClass().getResource("PolicyHolderFXMLFiles/FileReceiverBankingInfo.fxml"));
         FileReceiverBankingInfoController receiverBankingInfoController = loader.getController();
-        receiverBankingInfoController.setNewClaim(createNewClaim());
+        receiverBankingInfoController.setClaimBankingInfo(createNewClaim());
 
         Parent parent = loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -83,13 +84,10 @@ public class FileClaimController {
     public void setNewClaim(Claim newClaim) {
         this.newClaim = newClaim;
     }
-    public Claim saveNeClaim(){
-        setClaimBankingInfo();
-        return this.newClaim;
-    }
+
     private Claim createNewClaim(){
         if(checkID()){
-            newClaim.setInsuredPerson();
+            newClaim.setInsuredPerson();//get insured person from database
             newClaim.setCardNumber();//get card number from customer
         }
         if(checkDate(getClaimDate())){

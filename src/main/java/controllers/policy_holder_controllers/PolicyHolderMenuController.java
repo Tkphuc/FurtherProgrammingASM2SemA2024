@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import users.customers.PolicyHolder;
 
 import java.io.IOException;
 
@@ -28,6 +29,16 @@ public class PolicyHolderMenuController {
     @FXML private Stage stage;
     @FXML private Scene scene;
     @FXML Parent root;
+
+    private PolicyHolder policyHolder;
+
+    public PolicyHolder getPolicyHolder() {
+        return policyHolder;
+    }
+
+    public void setPolicyHolder(PolicyHolder policyHolder) {
+        this.policyHolder = policyHolder;
+    }
 
     public void switchToLoginScreen(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));
