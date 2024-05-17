@@ -1,4 +1,4 @@
-package controllers.policy_owner_controllers.beneficiary_controllers;
+package controllers.policy_owner_controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

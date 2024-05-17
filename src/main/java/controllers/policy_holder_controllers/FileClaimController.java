@@ -2,7 +2,7 @@ package controllers.policy_holder_controllers;
 
 import claim.Claim;
 import claim.Status;
-import controllers.policy_owner_controllers.calim_controllers.FileReceiverBankingInfoController;
+import controllers.policy_owner_controllers.FileReceiverBankingInfoController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
