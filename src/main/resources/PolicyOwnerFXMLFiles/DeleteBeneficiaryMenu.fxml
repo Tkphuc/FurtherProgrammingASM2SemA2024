@@ -10,7 +10,7 @@
       prefHeight="400.0" prefWidth="600.0"
       xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="controllers.policy_owner_controllers.beneficiary_controllers.DeleteBeneficiaryMenuController">
+fx:controller="controllers.policy_owner_controllers.DeleteBeneficiaryMenuController">
    <children>
       <Button fx:id="returnButton" layoutX="85.0" layoutY="305.0" mnemonicParsing="false" text="Return" onAction="#switchToPolicyOwnerMenu"/>
       <Button fx:id="confirmButton" layoutX="434.0" layoutY="305.0" mnemonicParsing="false" text="Confirm" />

@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import other_utilities.IDGenerator;
 
 import java.io.IOException;
 
@@ -21,7 +22,7 @@ public class AddBeneficiaryScreen1Controller {
     @FXML private TextField beneficiaryPhoneNumber;
     @FXML private CheckBox dependentChoice;
     @FXML private CheckBox policyHolderChoice;
-
+    private IDGenerator idGenerator;
 
     public AddBeneficiaryScreen1Controller() {
     }
@@ -39,8 +40,11 @@ public class AddBeneficiaryScreen1Controller {
         addBeneficiaryScreen2Controller.setFullName(getBeneficiaryNameField());
         addBeneficiaryScreen2Controller.setAddress(getBeneficiaryAddress());
         addBeneficiaryScreen2Controller.setPhoneNumber(getBeneficiaryPhoneNumber());
-
-        addBeneficiaryScreen2Controller.setBeneficiaryIDText();
+        String customerID;
+        do{  customerID = idGenerator.generateCustomerID();
+            addBeneficiaryScreen2Controller.setBeneficiaryIDText(idGenerator.generateCustomerID());
+        }
+        while(customerID ==);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

@@ -10,6 +10,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import other_utilities.DateWrapper;
+import other_utilities.IDGenerator;
+import users.customers.Dependent;
 import users.customers.PolicyHolder;
 
 import java.io.IOException;
@@ -19,6 +22,10 @@ public class AddBeneficiaryScreen2Controller {
     @FXML private TextField expirationDateField;
     @FXML private Text beneficiaryIDText;
     @FXML private Text beneficiaryTypeText;
+    private IDGenerator idGenerator;
+    private DateWrapper dateWrapper;
+    private PolicyHolder policyHolder;
+    private Dependent dependent;
     String fullName;
     String phoneNumber;
     String address;
@@ -30,6 +37,36 @@ public class AddBeneficiaryScreen2Controller {
 
     public void setBeneficiaryIDText(String beneficiaryIDText) {
         this.beneficiaryIDText.setText(beneficiaryIDText);
+    }
+    public String getBeneficiaryIDText() {
+        return beneficiaryIDText.getText();
+    }
+
+    public String getBeneficiaryTypeText() {
+        return beneficiaryTypeText.getText();
+    }
+
+    public String getCardID() {
+        return cardIDField.getText();
+    }
+    public String getExpirationDate() {
+        return expirationDateField.getText();
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void switchToAddBeneficiaryScreen1(ActionEvent event) throws IOException {
@@ -54,64 +91,40 @@ public class AddBeneficiaryScreen2Controller {
         stage.setScene(scene);
         stage.show();}
         else{
-
+            createPolicyHolder();
         }
     }
-
-    public String getBeneficiaryIDText() {
-        return beneficiaryIDText.getText();
+    public void createPolicyHolder(){
+        this.policyHolder.setAddress(address);
+        this.policyHolder.setEmail(email);
+        this.policyHolder.setFullName(fullName);
+         this.policyHolder.setPhoneNumber(phoneNumber);
+        this.policyHolder.setPassword();
     }
-
-    public String getBeneficiaryTypeText() {
-        return beneficiaryTypeText.getText();
-    }
-
-    public String getCardID() {
-        return cardIDField.getText();
-    }
-    public String getExpirationDate() {
-        return expirationDateField.getText();
-    }
-    public PolicyHolder createPolicyHolder(){
-        PolicyHolder policyHolder = new PolicyHolder();
-        policyHolder.setAddress(address);
-        policyHolder.setEmail(email);
-        policyHolder.setFullName(fullName);
-        policyHolder.setPhoneNumber(phoneNumber);
-        policyHolder.setPassword();
-        return policyHolder;
-    }
-    public InsuranceCard createInsuranceCard(){
-        InsuranceCard insuranceCard = new InsuranceCard();
-        insuranceCard.setExpirationDate();
-        insuranceCard.setCardID();
-        return insuranceCard;
-    }
-    public PolicyHolder completePolicyHolder(){
-        PolicyHolder policyHolder = createPolicyHolder();
+    public void completePolicyHolder(){
         policyHolder.setInsuranceCard(createInsuranceCard());
         return policyHolder;
     }
     public InsuranceCard completeInsuranceCard(){
         InsuranceCard insuranceCard = createInsuranceCard();
         insuranceCard.setCardHolder(completePolicyHolder());
-        insuranceCard.setPolicyOwner();
+        insuranceCard.setPolicyOwner();//get current user
         return insuranceCard;
     }
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public InsuranceCard createInsuranceCard(){
+        InsuranceCard insuranceCard = new InsuranceCard();
+        insuranceCard.setExpirationDate(dateWrapper.dateCreate(getExpirationDate()));
+        String cardID;
+        do{
+            cardID = idGenerator.generateCardID();
+            insuranceCard.setCardID(cardID);}
+        while (cardID ==);
+        return insuranceCard;}
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+
+
 
 }
