@@ -21,11 +21,7 @@ public class ChooseUserToUpdateClaimController {
     }
 
     public void switchScence(ActionEvent event){
-        if(selfClaimBoolean){
 
-        }else {
-
-        }
     }
 
     public void switchToPolicyHolderMenuController(ActionEvent event) throws IOException {

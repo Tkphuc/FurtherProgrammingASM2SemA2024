@@ -50,6 +50,41 @@ public class PolicyHolderMenuController {
         stage.setScene(scene);
         stage.show();
     }
-    
+    public void switchToGetDependentInfo(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/ViewDependentInfo.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToUpdateDependentInfo(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/ViewSelfInfo.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToFileClaimMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/FileClaim.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToChooseClaimToUpdateMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/ChooseClaimToUpdateMenu.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToChooseClaimToRetreiveMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/ChooseClaimToRetrieveMenu.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
 }

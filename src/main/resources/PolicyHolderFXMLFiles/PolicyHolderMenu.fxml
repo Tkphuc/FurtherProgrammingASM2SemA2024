@@ -10,12 +10,12 @@
          <children>
             <VBox fx:id="dependentFunctions" layoutX="22.0" layoutY="121.0" prefHeight="86.0" prefWidth="157.0">
                <children>
-                  <Button fx:id="getDependent" mnemonicParsing="false" text="Get dependents' info">
+                  <Button fx:id="getDependent" mnemonicParsing="false" text="Get dependents' info" onAction="#switchToGetDependentInfo">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="updateDependent" mnemonicParsing="false" text="Update dependents' info" />
+                  <Button fx:id="updateDependent" mnemonicParsing="false" text="Update dependents' info" onAction="#switchToUpdateDependentInfo" />
                </children>
             </VBox>
             <VBox fx:id="policyHolderFunctions" layoutX="186.0" layoutY="115.0" prefHeight="75.0" prefWidth="127.0">
@@ -29,9 +29,9 @@
                </children>
             </VBox>
             <Button fx:id="exit" layoutX="274.0" layoutY="263.0" mnemonicParsing="false" onAction="#switchToLoginScreen" prefHeight="25.0" prefWidth="39.0" text="Exit" />
-            <Button fx:id="fileNewClaimButton" layoutX="346.0" layoutY="115.0" mnemonicParsing="false" text="File new claim" />
-            <Button fx:id="updateClaimButton" layoutX="346.0" layoutY="151.0" mnemonicParsing="false" text="Update claim" />
-            <Button fx:id="retriveClaimButton" layoutX="342.0" layoutY="194.0" mnemonicParsing="false" text="Retrieve claim" />
+            <Button fx:id="fileNewClaimButton" layoutX="346.0" layoutY="115.0" mnemonicParsing="false" text="File new claim" onAction="#switchToFileClaimMenu" />
+            <Button fx:id="updateClaimButton" layoutX="346.0" layoutY="151.0" mnemonicParsing="false" text="Update claim" onAction="#switchToChooseClaimToUpdateMenu"/>
+            <Button fx:id="retriveClaimButton" layoutX="342.0" layoutY="194.0" mnemonicParsing="false" text="Retrieve claim" onAction="#switchToChooseClaimToRetreiveMenu" />
          </children>
       </Pane>
    </content>
