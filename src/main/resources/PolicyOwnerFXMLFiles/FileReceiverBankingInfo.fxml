@@ -18,7 +18,7 @@ fx:controller="controllers.policy_owner_controllers.FileReceiverBankingInfoContr
             <TextField fx:id="bankNameField" layoutX="172.0" layoutY="43.0" prefHeight="25.0" prefWidth="386.0" />
             <TextField fx:id="receiverNameField" layoutX="173.0" layoutY="122.0" prefHeight="25.0" prefWidth="383.0" />
             <TextField fx:id="accountNumberField" layoutX="174.0" layoutY="213.0" prefHeight="25.0" prefWidth="381.0" />
-            <Button fx:id="returnButton" layoutX="174.0" layoutY="296.0" mnemonicParsing="false" text="Exit" />
+            <Button fx:id="returnButton" layoutX="174.0" layoutY="296.0" mnemonicParsing="false" text="Return" onAction="#switchToFileClaimMenu" />
             <Button fx:id="saveButton" layoutX="365.0" layoutY="296.0" mnemonicParsing="false" text="Save" />
          </children>
       </Pane>

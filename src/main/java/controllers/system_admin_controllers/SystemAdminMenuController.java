@@ -29,8 +29,8 @@ public class SystemAdminMenuController {
         stage.show();
     }
     @FXML
-    public void switchToUpdateUserMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/UpdateUserInfo.fxml"));
+    public void switchToUpdateCustomerMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/UpdateCustomerMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
@@ -59,6 +59,46 @@ public class SystemAdminMenuController {
         stage.setScene(scene);
         stage.show();
     }
-    
+    public void switchToUpdateProviderMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/UpdateProviderInfo.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToAddInsuranceCardMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/AddInsuranceCardMenu.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToDeleteCustomerMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/DeleteCustomerMenu.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToDeleteProviderMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/DeleteProviderMenu.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToDeleteInsuranceCardMenu(ActionEvent event) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/DeleteInsuranceCardMenu.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
+
+
+
 
 }

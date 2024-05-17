@@ -10,6 +10,13 @@ import users.customers.Beneficiary;
 import users.providers.Provider;
 
 public class UpdateUserInfoController {
+    public Text userID;
+    public TextField newPassword;
+    public Text currentEmail;
+    public Text currentPhoneNumber;
+    public TextField newEmail;
+    public TextField newPhoneNumber;
+    public TextField newAddress;
     @FXML private  PasswordField newPasswordField;
     @FXML private TextField newIDField;
     @FXML private TextField newFullNameField;
