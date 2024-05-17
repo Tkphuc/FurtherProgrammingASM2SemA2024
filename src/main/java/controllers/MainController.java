@@ -4,8 +4,8 @@ public class MainController {
     private AddBeneficiaryScreen1Controller AddBeneficiaryScreen1Controller = new AddBeneficiaryScreen1Controller();
     private DependentMenuController dependentMenuController = new DependentMenuController();
     private FileClaimMenuController fileClaimMenuController = new FileClaimMenuController();
-    private InsuranceManagerMenu insuranceManagerMenu = new InsuranceManagerMenu();
-    private InsuranceSurveyorMenu insuranceSurveyorMenu = new InsuranceSurveyorMenu();
+    private InsuranceManagerMenuController insuranceManagerMenu = new InsuranceManagerMenuController();
+    private InsuranceSurveyorMenuController insuranceSurveyorMenu = new InsuranceSurveyorMenuController();
     private LoginController loginController = new LoginController();
     private PolicyHolderMenuController policyHolderMenuController = new PolicyHolderMenuController();
     private PolicyOwnerMenuController policyOwnerMenuController = new PolicyOwnerMenuController();
@@ -29,11 +29,11 @@ public class MainController {
         return fileClaimMenuController;
     }
 
-    public InsuranceManagerMenu getInsuranceManagerMenu() {
+    public InsuranceManagerMenuController getInsuranceManagerMenu() {
         return insuranceManagerMenu;
     }
 
-    public InsuranceSurveyorMenu getInsuranceSurveyorMenu() {
+    public InsuranceSurveyorMenuController getInsuranceSurveyorMenu() {
         return insuranceSurveyorMenu;
     }
 

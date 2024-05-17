@@ -13,21 +13,26 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ChooseUserToRetrieveClaimController {
+public class ChooseUserToUpdateClaimController {
 
     @FXML private TextField claimIDField;
-    public String getClaimID() {
+    public String getClaimIDField() {
         return claimIDField.getText();
     }
 
+    public void switchScence(ActionEvent event){
+        if(selfClaimBoolean){
 
+        }else {
 
-    public void switchToPolicyHolderMenu(ActionEvent event) throws IOException {
+        }
+    }
+
+    public void switchToPolicyHolderMenuController(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/PolicyHolderMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.show();
     }
-
 }

@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class InsuranceSurveyorMenu {
+public class InsuranceSurveyorMenuController {
    @FXML private Button exitButton;
     @FXML
     private VBox functions;
@@ -30,7 +30,7 @@ public class InsuranceSurveyorMenu {
     private Stage stage;
     @FXML private Scene scene;
 
-    public InsuranceSurveyorMenu() {
+    public InsuranceSurveyorMenuController() {
     }
 
     public void switchToLoginScreen(ActionEvent event) throws IOException {

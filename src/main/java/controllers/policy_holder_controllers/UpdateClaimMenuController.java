@@ -11,6 +11,7 @@ public class UpdateClaimMenuController {
     @FXML private TextField newReceiverBankField;
     @FXML private TextField newReceiverAccountNumberField;
 
+
     @FXML private Text claimIDText;
     @FXML private Text currentExamDate;
     @FXML private Text currentClaimIDText;
@@ -61,4 +62,5 @@ public class UpdateClaimMenuController {
     public String getNewReceiverAccountNumberField() {
         return newReceiverAccountNumberField.getText();
     }
+
 }

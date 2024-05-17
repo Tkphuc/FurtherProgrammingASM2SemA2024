@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.policy_holder_controllers.ChooseUserToUpdateClaimController">
+   <children>
+      <Button fx:id="returnButton" layoutX="66.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchToPolicyHolderMenuController" text="Return"  />
+      <Button fx:id="showButton" layoutX="411.0" layoutY="308.0" mnemonicParsing="false" text="Next" />
+      <TextField fx:id="claimIDField" layoutX="136.0" layoutY="166.0" prefHeight="25.0" prefWidth="428.0" />
+      <Label layoutX="37.0" layoutY="170.0" text="Claim ID" />
+   </children>
+</Pane>
