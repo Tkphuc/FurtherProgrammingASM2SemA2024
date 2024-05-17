@@ -25,7 +25,7 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="deleteClaim" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Delete claim" />
+                  <Button fx:id="deleteClaim" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Delete claim" onAction="#switchToDeleteClaimMenu"/>
                </children>
             </VBox>
             <VBox fx:id="beneficiaryFunctions" layoutX="349.0" layoutY="81.0" prefHeight="136.0" prefWidth="123.0">
@@ -35,19 +35,19 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="updateBeneficiary" mnemonicParsing="false" text="Update beneficiary">
+                  <Button fx:id="updateBeneficiary" mnemonicParsing="false" text="Update beneficiary" onAction="#switchToUpdateBeneficiaryMenu">
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="removeBeneficiary" mnemonicParsing="false" text="Remove Beneficiary">
+                  <Button fx:id="removeBeneficiary" mnemonicParsing="false" text="Remove Beneficiary" onAction="#switchToDeleteBeneficiaryMenu">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin></Button>
                   <Button fx:id="retrieveBeneficiaryButton" mnemonicParsing="false" onAction="#switchToViewBeneficiaryInfo" text="Retrieve Beneficiary" />
                </children>
             </VBox>
-            <Button fx:id="calculateYearlyFees" layoutX="238.0" layoutY="243.0" mnemonicParsing="false" text="Calculate yearly fees" />
+            <Button fx:id="calculateYearlyFees" layoutX="238.0" layoutY="243.0" mnemonicParsing="false" text="Calculate yearly fees" onAction="#switchToYearlyInsuranceFeeMenu"/>
             <Button fx:id="exit" layoutX="282.0" layoutY="291.0" mnemonicParsing="false" onAction="#switchToLoginScreen" text="Exit" />
          </children>
       </Pane>

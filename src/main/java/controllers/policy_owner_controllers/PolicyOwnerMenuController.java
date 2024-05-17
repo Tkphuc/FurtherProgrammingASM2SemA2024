@@ -60,7 +60,7 @@ public class PolicyOwnerMenuController {
 
     @FXML
     public void switchToViewBeneficiaryInfo(ActionEvent event) throws IOException {
-        switchScene("PolicyOwnerFXMLFiles/ClaimInformation.fxml", event);
+        switchScene("PolicyOwnerFXMLFiles/ViewBeneficiaryIno.fxml", event);
     }
 
     @FXML
@@ -72,7 +72,18 @@ public class PolicyOwnerMenuController {
     public void switchToAddBeneficiaryScreen1(ActionEvent event) throws IOException {
         switchScene("PolicyOwnerFXMLFiles/AddBeneficiaryScreen1.fxml", event);
     }
-
+    @FXML public void switchToDeleteBeneficiaryMenu(ActionEvent event) throws IOException{
+        switchScene("PolicyOwnerFXMLFiles/DeleteBeneficiaryMenu.fxml", event);
+    }
+    @FXML public void switchToUpdateBeneficiaryMenu(ActionEvent event) throws IOException{
+        switchScene("PolicyOwnerFXMLFiles/UpdateBeneficiaryInfo.fxml", event);
+    }
+    @FXML public void switchToYearlyInsuranceFeeMenu(ActionEvent event) throws IOException{
+        switchScene("PolicyOwnerFXMLFiles/YearlyInsuranceFee.fxml", event);
+    }
+    @FXML public void switchToDeleteClaimMenu(ActionEvent event) throws IOException{
+        switchScene("PolicyOwnerFXMLFiles/DeleteClaimMenu.fxml", event);
+    }
     private void switchScene(String fxmlFile, ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("/path/to/" + fxmlFile));
         Scene newScene = new Scene(parent);
