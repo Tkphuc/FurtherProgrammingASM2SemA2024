@@ -41,8 +41,9 @@ public class ChooseUserToUpdateClaimController {
     public void switchToUpdateClaimMenu(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.load(getClass().getResource("PolicyHolderFXMLFiles/UpdateClaimMenu.fxml"));
-        UpdateClaimMenuController retrieveClaimMenuController =loader.getController();
-        UpdateClaimMenuController.setClaim(claim);
+        UpdateClaimMenuController updateClaimMenuController =loader.getController();
+        updateClaimMenuController.setClaim(claim);
+        updateClaimMenuController.initalize();
         Parent parent = loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);

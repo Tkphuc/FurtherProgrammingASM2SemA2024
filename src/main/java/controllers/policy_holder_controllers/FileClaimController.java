@@ -46,8 +46,7 @@ public class FileClaimController {
         FXMLLoader loader = new FXMLLoader();
         loader.load(getClass().getResource("PolicyHolderFXMLFiles/FileReceiverBankingInfo.fxml"));
         FileReceiverBankingInfoController receiverBankingInfoController = loader.getController();
-        receiverBankingInfoController.setClaimBankingInfo(createNewClaim());
-
+        receiverBankingInfoController.setNewClaim(this.newClaim);
         Parent parent = loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);

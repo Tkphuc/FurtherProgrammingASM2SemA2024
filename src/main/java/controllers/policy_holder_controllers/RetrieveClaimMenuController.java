@@ -33,15 +33,15 @@ public class RetrieveClaimMenuController {
 
 
 
-    public void setInsuredPersonName(String insuredPersonName) {
+    public void setInsuredPersonName() {
         this.insuredPersonName.setText(claim.getInsuredPerson().getFullName());
     }
 
-    public void setInsuredPersonID(String insuredPersonID) {
+    public void setInsuredPersonID() {
         this.insuredPersonID.setText(claim.getInsuredPerson().getID());
     }
 
-    public void setCardNumber(String cardNumber) {
+    public void setCardNumber() {
         this.cardNumber.setText(claim.getCardNumber());
     }
 
@@ -53,12 +53,12 @@ public class RetrieveClaimMenuController {
         this.examDate.setText(dateWrapper.dateToString(claim.getExamDate()));
     }
 
-    public void setClaimDate(String claimDate) {
+    public void setClaimDate() {
         this.claimDate.setText(dateWrapper.dateToString(claim.getClaimDate()));
     }
 
-    public void setClaimID(String claimID) {
-        this.claimIDText.setText(claimID);
+    public void setClaimID() {
+        this.claimIDText.setText(claim.getClaimID());
     }
 
     public void setStatus() {
@@ -67,11 +67,22 @@ public class RetrieveClaimMenuController {
     public void setClaim(Claim claim){
         this.claim = claim;
     }
+    public void initialize(){
+        setStatus();
+        setClaimID();
+        setCardNumber();
+        setClaimAmount();
+        setClaimDate();
+        setExamDate();
+        setInsuredPersonID();
+        setInsuredPersonName();
+    }
     public void switchToViewBankingInfo(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.load(getClass().getResource("PolicyHolderFXMLFiles/UpdateClaimMenu.fxml"));
         ViewBankingInfoController viewBankingInfoController = loader.getController();
         viewBankingInfoController.setClaim(claim);
+        viewBankingInfoController.initialize();
         Parent parent = loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);

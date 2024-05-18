@@ -63,9 +63,24 @@ public class UpdatePolicyHolderInfoController {
     public void setPolicyHolder(PolicyHolder policyHolder) {
         this.policyHolder = policyHolder;
     }
-
-    public void updatePolicyHolder(){
-
+    public void initialize(){
+        setCurrentAddress();
+        setCurrentEmail();
+        setCurrentPassword();
+        setCurrentPhoneNumber();
     }
+    public void updatePolicyHolder(){
+            if(!getNewEmail().isBlank()) {
+                policyHolder.setEmail(getNewEmail());
+            }
+            if(!getNewPassword().isBlank()) {
+                policyHolder.setPassword(getNewPassword());
+            }
+            if(!getNewPhoneNumber().isBlank()){
+            policyHolder.setPhoneNumber(getNewPhoneNumber());}
 
+            if (!getNewAddress().isBlank()){
+            policyHolder.setAddress(getNewAddress());}
+    }
+    /*save policy holder back to database*/
 }

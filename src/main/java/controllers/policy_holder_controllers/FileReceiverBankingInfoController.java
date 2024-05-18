@@ -43,12 +43,16 @@ public class FileReceiverBankingInfoController {
         stage.setScene(scene);
         stage.show();
     }
-    public void setClaimBankingInfo(Claim claim){
-        this.newClaim = claim;
+
+    public void setNewClaim(Claim newClaim) {
+        this.newClaim = newClaim;
+    }
+
+    public void setClaimBankingInfo(){
         this.newClaim.setReceiverBankingInfo(new ReceiverBankingInfo(getBankName(),getReceiverName(),getAccountNumber()));
     }
     public Claim saveClaimToDatabase(){
-        //save to Database
+        setClaimBankingInfo();
         return this.newClaim;
     }
 }

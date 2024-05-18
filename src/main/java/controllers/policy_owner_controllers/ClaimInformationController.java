@@ -23,15 +23,15 @@ public class ClaimInformationController {
         this.claimIDText.setText(claim.getClaimID());
     }
 
-    public void setInsuredPersonName(String insuredPersonName) {
+    public void setInsuredPersonName() {
         this.insuredPersonName.setText(claim.getInsuredPerson().getFullName());
     }
 
-    public void setInsuredPersonID(String insuredPersonID) {
+    public void setInsuredPersonID() {
         this.insuredPersonID.setText(claim.getInsuredPerson().getID());
     }
 
-    public void setCardNumber(String cardNumber) {
+    public void setCardNumber() {
         this.cardNumber.setText(claim.getCardNumber());
     }
 
@@ -43,7 +43,7 @@ public class ClaimInformationController {
         this.examDate.setText(dateWrapper.dateToString(claim.getExamDate()));
     }
 
-    public void setClaimDate(String claimDate) {
+    public void setClaimDate() {
         this.claimDate.setText(dateWrapper.dateToString(claim.getClaimDate()));
     }
 
@@ -53,6 +53,15 @@ public class ClaimInformationController {
     public void setClaim(Claim claim){
         this.claim = claim;
     }
-
-
+    public void initalize(){
+        setCardNumber();
+        setClaimAmount();
+        setClaimDate();
+        setClaimDate();
+        setClaimIDText();
+        setInsuredPersonName();
+        setInsuredPersonID();
+        setExamDate();
+        setStatus();
+    }
 }

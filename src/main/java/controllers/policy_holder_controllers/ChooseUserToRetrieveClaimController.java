@@ -42,6 +42,7 @@ public class ChooseUserToRetrieveClaimController {
         loader.load(getClass().getResource("PolicyHolderFXMLFiles/RetrieveClaimMenu.fxml"));
         RetrieveClaimMenuController retrieveClaimMenuController =loader.getController();
         retrieveClaimMenuController.setClaim(claim);
+        retrieveClaimMenuController.initialize();
         Parent parent = loader.load();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);

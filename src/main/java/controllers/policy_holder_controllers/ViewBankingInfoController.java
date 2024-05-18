@@ -25,11 +25,16 @@ public class ViewBankingInfoController {
         this.receiverName.setText(claim.getReceiverBankingInfo().getName());
     }
 
-    public void setAccountNumber(Text accountNumber) {
+    public void setAccountNumber() {
         this.accountNumber.setText(claim.getReceiverBankingInfo().getNumber());
     }
     public void setClaim(Claim claim) {
         this.claim = claim;
+    }
+    public void initialize(){
+        setAccountNumber();
+        setBankName();
+        setReceiverName();
     }
     public void switchToRetrieveClaimMenu(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/RetrieveClaimMenu.fxml"));

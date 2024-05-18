@@ -1,11 +1,14 @@
 package controllers.policy_holder_controllers;
 
 import claim.Claim;
+import claim.ReceiverBankingInfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import other_utilities.DateWrapper;
 
 public class UpdateClaimMenuController {
+    ;
     @FXML private TextField newExamDateField;
     @FXML private TextField newClaimDateField;
     @FXML private TextField newReceiverNameField;
@@ -15,35 +18,36 @@ public class UpdateClaimMenuController {
 
     @FXML private Text claimIDText;
     @FXML private Text currentExamDate;
-    @FXML private Text currentClaimIDText;
+    @FXML private Text currentClaimDateText;
     @FXML private Text currentReceiverNameText;
     @FXML private Text currentReceiverBankText;
     @FXML private Text currentReceiverAccountNumber;
 
+    private DateWrapper dateWrapper;
+
     private Claim claim;
 
-    public void setClaimIDText(String claimIDText) {
-        this.claimIDText.setText(claimIDText);
+    public void setClaimIDText() {
+        this.claimIDText.setText(claim.getClaimID());
     }
 
-    public void setCurrentExamDateField(String currentExamDateField) {
-        this.currentExamDate.setText(currentExamDateField);
+    public void setCurrentClaimDateText(){
+        this.currentClaimDateText.setText(dateWrapper.dateToString(claim.getClaimDate()));
+    }
+    public void setCurrentExamDate() {
+        this.currentExamDate.setText(dateWrapper.dateToString(claim.getExamDate()));
     }
 
-    public void setCurrentClaimIDText(String currentClaimIDText) {
-        this.currentClaimIDText.setText(currentClaimIDText);
+    public void setCurrentReceiverNameText() {
+        this.currentReceiverNameText.setText(claim.getReceiverBankingInfo().getName());
     }
 
-    public void setCurrentReceiverNameText(String currentReceiverNameText) {
-        this.currentReceiverNameText.setText(currentReceiverNameText);
+    public void setCurrentReceiverBankText() {
+        this.currentReceiverBankText.setText(claim.getReceiverBankingInfo().getBank());
     }
 
-    public void setCurrentReceiverBankText(String currentReceiverBankText) {
-        this.currentReceiverBankText.setText(currentReceiverBankText);
-    }
-
-    public void setCurrentReceiverAccountNumber(String currentReceiverAccountNumber) {
-        this.currentReceiverAccountNumber.setText(currentReceiverAccountNumber);
+    public void setCurrentReceiverAccountNumber() {
+        this.currentReceiverAccountNumber.setText(claim.getReceiverBankingInfo().getNumber());
     }
 
     public String getNewExamDateField() {
@@ -73,4 +77,19 @@ public class UpdateClaimMenuController {
     public void setClaim(Claim claim) {
         this.claim = claim;
     }
+    public void initalize(){
+        setClaimIDText();
+        setCurrentExamDate();
+        setCurrentReceiverNameText();
+        setCurrentReceiverBankText();
+        setCurrentReceiverAccountNumber();
+        setCurrentClaimDateText();
+    }
+    public void updateClaim(){
+        claim.setExamDate(dateWrapper.dateCreate(getNewExamDateField()));
+        ReceiverBankingInfo newBankingInfo = new ReceiverBankingInfo(getNewReceiverBankField(),getNewReceiverNameField(),getNewReceiverAccountNumberField());
+        claim.setReceiverBankingInfo(newBankingInfo);
+        claim.setClaimDate(dateWrapper.dateCreate(getNewClaimDateField()));
+    }
+    /*save new claim*/
 }

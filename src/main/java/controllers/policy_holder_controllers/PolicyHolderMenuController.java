@@ -48,7 +48,12 @@ public class PolicyHolderMenuController {
         stage.show();
     }
     public void switchToUpdateSelfInfo(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/UpdatePersonalInformationPolicyHolder.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.getClass().getResource("PolicyHolderFXMLFiles/UpdatePersonalInformationPolicyHolder.fxml");
+        UpdatePolicyHolderInfoController updatePolicyHolderInfoController = loader.getController();
+        updatePolicyHolderInfoController.setPolicyHolder(/*current user*/);
+        updatePolicyHolderInfoController.initialize();
+        Parent parent = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(parent);
         stage.setScene(scene);
@@ -62,7 +67,10 @@ public class PolicyHolderMenuController {
         stage.show();
     }
     public void switchToGetDependentInfo(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/ViewDependentInfo.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.getClass().getResource("PolicyHolderFXMLFiles/ViewDependentInfo.fxml");
+
+        Parent parent = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(parent);
         stage.setScene(scene);
@@ -70,6 +78,7 @@ public class PolicyHolderMenuController {
     }
     public void switchToUpdateDependentInfo(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/ViewSelfInfo.fxml"));
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(parent);
         stage.setScene(scene);
