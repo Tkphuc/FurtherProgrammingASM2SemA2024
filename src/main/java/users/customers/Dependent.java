@@ -6,4 +6,11 @@ public class Dependent extends Beneficiary {
 
     public void RetrieveClaim(){}
 
+    public PolicyHolder getDependOn() {
+        return dependOn;
+    }
+
+    public void setDependOn(PolicyHolder dependOn) {
+        this.dependOn = dependOn;
+    }
 }

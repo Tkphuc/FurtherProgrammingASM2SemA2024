@@ -37,7 +37,7 @@ public class ViewBankingInfoController {
         setReceiverName();
     }
     public void switchToRetrieveClaimMenu(ActionEvent event) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/RetrieveClaimMenu.fxml"));
+        Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/ShowDependentClaimMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);

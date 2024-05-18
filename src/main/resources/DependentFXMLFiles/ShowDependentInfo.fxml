@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.dependent_controllers.ShowDependentInfoController">
+    <children>
+        <Button fx:id="returnButton" layoutX="85.0" layoutY="327.0" mnemonicParsing="false" text="Return" onAction="#switchToDependentMenu"/>
+        <Label layoutX="42.0" layoutY="88.0" text="Policy holder ID " />
+        <Label layoutX="49.0" layoutY="122.0" text="Full name" />
+        <Label layoutX="55.0" layoutY="152.0" text="address" />
+        <Label layoutX="61.0" layoutY="183.0" text="email" />
+        <Label layoutX="51.0" layoutY="226.0" text="phone number" />
+        <Text fx:id="PolicyHolderIDText" layoutX="201.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="nameText" layoutX="201.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="addressText" layoutX="201.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="emailText" layoutX="201.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="phoneNumberText" layoutX="201.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+    </children>
+</Pane>
