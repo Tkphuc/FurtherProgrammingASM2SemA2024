@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.Pane?>
-<TitledPane text="Receiver Banking Info" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" >
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TitledPane text="Receiver Banking Info" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.policy_owner_controllers.ViewBankingInfoController">
    <content>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -12,6 +13,9 @@
             <Label layoutX="56.0" layoutY="200.0" prefHeight="20.0" prefWidth="115.0" text="Account number" />
             <Button fx:id="returnButton" layoutX="138.0" layoutY="298.0" mnemonicParsing="false" text="Return" />
             <Button fx:id="nextButton" layoutX="377.0" layoutY="298.0" mnemonicParsing="false" text="Next" />
+            <Text fx:id="bankName" layoutX="277.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="receiverName" layoutX="277.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="accountNumber" layoutX="289.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
          </children>
       </Pane>
    </content>

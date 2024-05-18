@@ -1,10 +1,18 @@
 package controllers.policy_owner_controllers;
 
 import claim.Claim;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import other_utilities.DateWrapper;
+
+import java.io.IOException;
 
 public class ClaimInformationController {
     @FXML private Text claimIDText;
@@ -63,5 +71,24 @@ public class ClaimInformationController {
         setInsuredPersonID();
         setExamDate();
         setStatus();
+    } public void switchToRetrieveBeneficiaryClain(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent parent = loader.load(getClass().getResource("PolicyOwnerFXMLFiles/RetrieveBeneficiaryCaimMenu.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToViewBankingInfo(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.load(getClass().getResource("PolicyOwnerFXMLFiles/ViewBankingInfo.fxml"));
+        ViewBankingInfoController viewBankingInfoController = loader.getController();
+        viewBankingInfoController.setClaim(this.claim);
+        viewBankingInfoController.initalize();
+        Parent parent = loader.load();
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
     }
 }

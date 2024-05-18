@@ -31,6 +31,7 @@ public class RetrieveBeneficiaryClaimMenuController {
         Parent parent = loader.load(getClass().getResource("PolicyOwnerFXMLFiles/ClaimInformation.fxml"));
         ClaimInformationController claimInformationController = loader.getController();
         claimInformationController.setClaim();//get claim from claim id entered
+        claimInformationController.initalize();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
