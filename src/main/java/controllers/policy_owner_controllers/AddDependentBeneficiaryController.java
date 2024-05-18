@@ -10,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import other_utilities.DateWrapper;
+import other_utilities.IDGenerator;
 import users.customers.Dependent;
 
 import java.io.IOException;
@@ -24,6 +26,12 @@ public class AddDependentBeneficiaryController {
     private String address;
     private String email;
     InsuranceCard insuranceCard;
+    private Dependent dependent;
+
+    private IDGenerator idGenerator;
+    private DateWrapper dateWrapper;
+
+
     public String getPolicyHolderOfDependentField() {
         return policyHolderOfDependentField.getText();
     }
@@ -35,15 +43,31 @@ public class AddDependentBeneficiaryController {
         stage.show();
     }
     public Dependent createDependent(){
-        Dependent dependent = new Dependent();
+        dependent = new Dependent();
         dependent.setAddress(address);
         dependent.setEmail(email);
         dependent.setFullName(fullName);
-        dependent.setID();
+        String dependentID;
+        do{
+            dependentID = idGenerator.generateCustomerID();
+            dependent.setID(dependentID);
+        }while (dependentID ==);
         dependent.setPhoneNumber(phoneNumber);
         dependent.setPassword();
     }
-
+    public void completeInsuranceCard(){
+        insuranceCard.setCardHolder(dependent);
+        insuranceCard.setPolicyOwner();//get current user
+    }
+    public void completeDependent(){
+        dependent.setInsuranceCard(insuranceCard);
+    }
+    public Dependent saveDependent(ActionEvent event) throws IOException {
+        createDependent();
+        completeInsuranceCard();
+        completeDependent();
+        return this.dependent; //save dependent into database
+    }
     public String getFullName() {
         return fullName;
     }
@@ -74,5 +98,13 @@ public class AddDependentBeneficiaryController {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public InsuranceCard getInsuranceCard() {
+        return insuranceCard;
+    }
+
+    public void setInsuranceCard(InsuranceCard insuranceCard) {
+        this.insuranceCard = insuranceCard;
     }
 }

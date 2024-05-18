@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -18,22 +19,22 @@ import users.customers.PolicyHolder;
 import java.io.IOException;
 
 public class AddBeneficiaryScreen2Controller {
+    @FXML private CheckBox dependentChoice;
+    @FXML private CheckBox policyHolderChoice;
     @FXML private TextField cardIDField;
     @FXML private TextField expirationDateField;
     @FXML private Text beneficiaryIDText;
-    @FXML private Text beneficiaryTypeText;
+
     private IDGenerator idGenerator;
     private DateWrapper dateWrapper;
     private PolicyHolder policyHolder;
     private Dependent dependent;
+    private InsuranceCard insuranceCard;
+
     String fullName;
     String phoneNumber;
     String address;
     String email;
-
-    public void setBeneficiaryTypeText(String beneficiaryTypeText) {
-        this.beneficiaryTypeText.setText(beneficiaryTypeText);
-    }
 
     public void setBeneficiaryIDText(String beneficiaryIDText) {
         this.beneficiaryIDText.setText(beneficiaryIDText);
@@ -41,14 +42,10 @@ public class AddBeneficiaryScreen2Controller {
     public String getBeneficiaryIDText() {
         return beneficiaryIDText.getText();
     }
-
-    public String getBeneficiaryTypeText() {
-        return beneficiaryTypeText.getText();
-    }
-
+    /*
     public String getCardID() {
         return cardIDField.getText();
-    }
+    }*/
     public String getExpirationDate() {
         return expirationDateField.getText();
     }
@@ -77,8 +74,8 @@ public class AddBeneficiaryScreen2Controller {
         stage.show();
     }
 
-    public void switchToAddNextScenceOrSave(ActionEvent event) throws IOException {
-        if(beneficiaryTypeText.getText().equalsIgnoreCase("Dependent")){
+    public void switchToAddDependentOrSave(ActionEvent event) throws IOException {
+        if(dependentChoice.isSelected()){
             FXMLLoader loader = FXMLLoader.load(getClass().getResource("PolicyOwnerFXMLFiles/AddBeneficiaryDependent.fxml"));
             Parent root = loader.load();
             AddDependentBeneficiaryController addDependentBeneficiaryController = loader.getController();
@@ -86,12 +83,17 @@ public class AddBeneficiaryScreen2Controller {
             addDependentBeneficiaryController.setFullName(this.fullName);
             addDependentBeneficiaryController.setEmail(this.email);
             addDependentBeneficiaryController.setPhoneNumber(this.phoneNumber);
+            createInsuranceCard();
+            addDependentBeneficiaryController.setInsuranceCard(this.insuranceCard);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();}
-        else{
+        else if(policyHolderChoice.isSelected()){
             createPolicyHolder();
+            createInsuranceCard();
+            completePolicyHolder();
+            completeInsuranceCard();
         }
     }
     public void createPolicyHolder(){
@@ -102,26 +104,23 @@ public class AddBeneficiaryScreen2Controller {
         this.policyHolder.setPassword();
     }
     public void completePolicyHolder(){
-        policyHolder.setInsuranceCard(createInsuranceCard());
-        return policyHolder;
+        policyHolder.setInsuranceCard(insuranceCard);
     }
-    public InsuranceCard completeInsuranceCard(){
-        InsuranceCard insuranceCard = createInsuranceCard();
-        insuranceCard.setCardHolder(completePolicyHolder());
+    public void completeInsuranceCard(){
+        insuranceCard = createInsuranceCard();
+        insuranceCard.setCardHolder(policyHolder);
         insuranceCard.setPolicyOwner();//get current user
-        return insuranceCard;
     }
-    public InsuranceCard createInsuranceCard(){
-        InsuranceCard insuranceCard = new InsuranceCard();
+    public void createInsuranceCard(){
         insuranceCard.setExpirationDate(dateWrapper.dateCreate(getExpirationDate()));
         String cardID;
         do{
             cardID = idGenerator.generateCardID();
             insuranceCard.setCardID(cardID);}
         while (cardID ==);
-        return insuranceCard;}
+        }
     }
-
+    /* store card back to database*/
 
 
 
