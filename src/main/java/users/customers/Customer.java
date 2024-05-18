@@ -2,7 +2,9 @@ package users.customers;
 
 import users.Users;
 
-public abstract class Customer implements Users {
+import java.io.Serializable;
+
+public abstract class Customer implements Users, Serializable {
     private String customerID;
     private String fullName;
     private String password;

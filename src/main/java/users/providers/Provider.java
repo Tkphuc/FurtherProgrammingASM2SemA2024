@@ -2,7 +2,9 @@ package users.providers;
 
 import users.Users;
 
-public abstract class Provider implements Users {
+import java.io.Serializable;
+
+public abstract class Provider implements Users, Serializable {
     private String providerID;
     private String fullName;
     private String password;

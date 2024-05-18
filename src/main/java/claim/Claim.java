@@ -2,11 +2,12 @@ package claim;
 
 import users.customers.Customer;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Claim {
+public class Claim implements Serializable {
 
     private String claimID;
     private Date claimDate;

@@ -2,9 +2,10 @@ package insurance_card;
 
 import users.customers.Customer;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class InsuranceCard {
+public class InsuranceCard implements Serializable {
     private String cardID ;
     private Customer cardHolder;
     private String policyOwner;
