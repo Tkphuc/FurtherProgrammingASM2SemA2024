@@ -9,4 +9,12 @@ public class PolicyHolder extends Beneficiary {
     public void UpdateClaim(){}
     public void RetrieveClaim(){}
     public void updatePolicyHolder(){}
+
+    public List<Dependent> getDependents() {
+        return dependents;
+    }
+
+    public void setDependents(List<Dependent> dependents) {
+        this.dependents = dependents;
+    }
 }
