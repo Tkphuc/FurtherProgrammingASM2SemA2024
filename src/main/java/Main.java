@@ -1,3 +1,9 @@
+/*
+ * *
+ *  * @author <Team 31>
+ *
+ */
+
 import controllers.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

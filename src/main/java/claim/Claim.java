@@ -1,3 +1,9 @@
+/*
+ * *
+ *  * @author <Team 31>
+ *
+ */
+
 package claim;
 
 import users.customers.Customer;

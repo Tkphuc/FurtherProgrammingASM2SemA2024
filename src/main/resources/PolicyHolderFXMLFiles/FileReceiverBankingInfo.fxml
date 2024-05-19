@@ -3,6 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<!--
+  ~ /**
+  ~  * @author <Team 31>
+  ~  */
+  -->
+
 <TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="File Receiver Banking info" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.policy_holder_controllers.FileReceiverBankingInfoController">
    <content>
       <Pane prefHeight="200.0" prefWidth="200.0">

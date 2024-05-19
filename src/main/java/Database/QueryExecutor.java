@@ -1,3 +1,9 @@
+/*
+ * *
+ *  * @author <Team 31>
+ *
+ */
+
 package Database;
 
 import claim.Claim;
@@ -7,6 +13,8 @@ import insurance_card.InsuranceCard;
 import users.customers.Beneficiary;
 import users.customers.Dependent;
 import users.customers.PolicyHolder;
+import users.customers.PolicyOwner;
+import users.providers.InsuranceManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,7 +23,6 @@ import java.sql.Statement;
 import java.sql.SQLException;
 import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 /*https://stackoverflow.com/questions/11983554/reading-data-from-database-and-storing-in-array-list-object*/
 /*https://stackoverflow.com/questions/17502827/how-to-get-the-list-inside-a-resultset*/
@@ -34,7 +41,6 @@ public class QueryExecutor {
             System.out.println(ex.getMessage());
         }
     }
-
     // Method to insert a new claim into the database
     public static void insertClaim(Connection conn, Claim claim) {
         String SQL = "INSERT INTO public.Claim (claim_id, claim_date, insured_person_id, card_number, exam_date, documents, claim_amount, status, banking_info_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -118,6 +124,7 @@ public class QueryExecutor {
                 dependent.setID(resultSet.getString("customerID"));
                 dependent.setPassword(resultSet.getString("password"));
                 dependent.setDependOn((PolicyHolder) resultSet.getObject("dependOn"));
+                dependent.setInsuranceCard();
                 allDependents.add(dependent);
             }
         }catch (SQLException e){
@@ -125,6 +132,43 @@ public class QueryExecutor {
         }
         return allDependents;
     }
+    public static List<PolicyOwner> loadAllPolicyOwners(Connection conn){
+        String query = "SELECT * FROM PolicyOwner";
+        ArrayList<PolicyOwner> allPolicyOwners = new ArrayList<>();
+        try (PreparedStatement pstmt = conn.prepareStatement(query)){
+            ResultSet resultSet = pstmt.executeQuery();
+            while (resultSet.next()){
+                PolicyOwner policyOwner = new PolicyOwner();
+                policyOwner.setID(resultSet.getString("customerID"));
+                policyOwner.setPassword(resultSet.getString("password"));
+                policyOwner.setFullName(resultSet.getString("fullName"));
+                policyOwner.SetBeneficiaries(resultSet.getObject("beneficiaries", List.class));
+                allPolicyOwners.add(policyOwner);
+            }
+        }catch (SQLException e){
+
+        }
+        return allPolicyOwners;
+    }
+    public static List<InsuranceManager> loadAllInsuranceManagers(Connection conn){
+        String query = "SELECT * FROM InsuranceManager";
+        ArrayList<InsuranceManager> allInsuranceManagers = new ArrayList<>();
+        try (PreparedStatement pstmt = conn.prepareStatement(query)){
+            ResultSet resultSet = pstmt.executeQuery();
+            while (resultSet.next()){
+                InsuranceManager insuranceManager = new InsuranceManager();
+                insuranceManager.setID(resultSet.getString("customerID"));
+                insuranceManager.setPassword(resultSet.getString("password"));
+                insuranceManager.setFullName(resultSet.getString("fullName"));
+                insuranceManager.setSurveyorList(resultSet.getObject("surveyorList",List.class));
+                allInsuranceManagers.add(insuranceManager);
+            }
+        }catch (SQLException e){
+
+        }
+        return allInsuranceManagers;
+    }
+
 
 
 

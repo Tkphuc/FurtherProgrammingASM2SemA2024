@@ -1,3 +1,9 @@
+/*
+ * *
+ *  * @author <Team 31>
+ *
+ */
+
 package users.providers;
 
 import java.util.ArrayList;
@@ -17,6 +23,13 @@ public class InsuranceManager extends Provider {
         }return null;
     }
 
+    public List<InsuranceSurveyor> getSurveyorList() {
+        return surveyorList;
+    }
+
+    public void setSurveyorList(List<InsuranceSurveyor> surveyorList) {
+        this.surveyorList = surveyorList;
+    }
 
     @Override
     public boolean equals(Object o) {

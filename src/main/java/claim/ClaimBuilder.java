@@ -1,6 +1,10 @@
-package claim; /**
- * @author <Tran Kiem Phuc - s3927187>
+/*
+ * *
+ *  * @author <Team 31>
+ *
  */
+
+package claim;
 import users.customers.Customer;
 
 import java.util.Date;

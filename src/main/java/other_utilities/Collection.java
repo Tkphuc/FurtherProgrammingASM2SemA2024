@@ -1,3 +1,9 @@
+/*
+ * *
+ *  * @author <Team 31>
+ *
+ */
+
 package other_utilities;
 
 public interface Collection {

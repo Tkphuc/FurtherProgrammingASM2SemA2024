@@ -1,3 +1,15 @@
+/*
+ * *
+ *  * @author <Team 31>
+ *
+ */
+
+/*
+ * *
+ *  * @author <Team 31>
+ *
+ */
+
 package users.customers;
 
 import java.util.List;
@@ -9,7 +21,9 @@ public class PolicyOwner extends Customer {
     public void FileClaim(){}
     public void UpdateClaim(){}
     public void RetrieveClaim(){}
-    public void AddBeneficiaries(){}
+    public void SetBeneficiaries(List<Beneficiary> beneficiaries){
+        this.beneficiaries = beneficiaries;
+    }
 
     public void RemoveBeneficiaries(){}
 
