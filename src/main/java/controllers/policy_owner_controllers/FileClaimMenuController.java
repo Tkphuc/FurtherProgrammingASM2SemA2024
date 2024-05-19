@@ -48,7 +48,7 @@ public class FileClaimMenuController {
         FXMLLoader loader = new FXMLLoader();
         loader.load(getClass().getResource("PolicyOwnerFXMLFiles/FileReceiverBankingInfo.fxml"));
         FileReceiverBankingInfoController receiverBankingInfoController = loader.getController();
-        receiverBankingInfoController.setNewClaim(createNewClaim());
+        //receiverBankingInfoController.setNewClaim(createNewClaim());
 
         Parent parent = loader.load();
         Stage  stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -94,6 +94,7 @@ public class FileClaimMenuController {
     public boolean checkDocument(String document){
         return formatCheck.documentNameCheck(document) != null;
     }
+    /*
     private Claim createNewClaim(){
         if(checkID()){
             newClaim.setInsuredPerson();
@@ -110,5 +111,5 @@ public class FileClaimMenuController {
         }
         newClaim.setStatus(Status.NEW);
         return newClaim;
-    }
+    }*/
 }

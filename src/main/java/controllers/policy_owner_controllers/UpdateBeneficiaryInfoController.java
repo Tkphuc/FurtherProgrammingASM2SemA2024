@@ -70,6 +70,6 @@ public class UpdateBeneficiaryInfoController {
         beneficiary.setAddress(getNewAddressField());}
     }
     public void saveUpdateBeneficiary(ActionEvent event){
-        updateBeneficiary(/*pass beneficiary here*/);
+        //updateBeneficiary(/*pass beneficiary here*/);
     }
 }

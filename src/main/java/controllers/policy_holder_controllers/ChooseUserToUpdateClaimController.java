@@ -29,11 +29,12 @@ public class ChooseUserToUpdateClaimController {
     public void switchScence(ActionEvent event){
 
     }
+    /*
     public void getClaimFromDatabase(){
         if(!getClaimIDField().isBlank() && getClaimIDField() != null ){
             if(getClaimIDField() )
         }
-    }
+    }*/
 
     public void switchToPolicyHolderMenuController(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("PolicyHolderFXMLFiles/PolicyHolderMenu.fxml"));

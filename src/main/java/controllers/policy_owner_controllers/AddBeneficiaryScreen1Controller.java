@@ -37,20 +37,13 @@ public class AddBeneficiaryScreen1Controller {
         FXMLLoader loader = FXMLLoader.load(getClass().getResource("PolicyOwnerFXMLFiles/AddBeneficiaryScreen2.fxml"));
         Parent root = loader.load();
         AddBeneficiaryScreen2Controller addBeneficiaryScreen2Controller = loader.getController();
-        if(isPolicyHolderSelected()){
-            addBeneficiaryScreen2Controller.setBeneficiaryTypeText("Policy Holder");
-        } else if (isDependentSelected()) {
-            addBeneficiaryScreen2Controller.setBeneficiaryTypeText("Dependent");
-        }
         addBeneficiaryScreen2Controller.setEmail(getBeneficiaryEmail());
         addBeneficiaryScreen2Controller.setFullName(getBeneficiaryNameField());
         addBeneficiaryScreen2Controller.setAddress(getBeneficiaryAddress());
         addBeneficiaryScreen2Controller.setPhoneNumber(getBeneficiaryPhoneNumber());
         String customerID;
-        do{  customerID = idGenerator.generateCustomerID();
-            addBeneficiaryScreen2Controller.setBeneficiaryIDText(idGenerator.generateCustomerID());
-        }
-        while(customerID != );
+        customerID = idGenerator.generateCustomerID();
+        addBeneficiaryScreen2Controller.setBeneficiaryIDText(idGenerator.generateCustomerID());
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

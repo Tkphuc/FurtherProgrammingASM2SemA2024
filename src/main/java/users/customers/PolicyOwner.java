@@ -28,12 +28,13 @@ public class PolicyOwner extends Customer {
     public void RemoveBeneficiaries(){}
 
     public void GetBeneficiaries(){}
+    /*
+    public double CalculateYearlyFee() {
+        final double DEPENDENT_COST_RATIO = 0.6;
+        double feeSum;
+        BeneficiaryCollection beneficiaryCollection = new BeneficiaryCollection();
+        beneficiaryCollection.setBeneficiaryCollection(beneficiaries);
 
-    public double CalculateYearlyFee(){
-    final double DEPENDENT_COST_RATIO = 0.6;
-    double feeSum;
-    BeneficiaryCollection beneficiaryCollection = new BeneficiaryCollection();
-    beneficiaryCollection.setBeneficiaryCollection(beneficiaries);
     while (beneficiaryCollection.hasNext()){
         if (beneficiaryCollection.next() instanceof PolicyHolder){
 
@@ -43,5 +44,6 @@ public class PolicyOwner extends Customer {
     }
     return feeSum;
     }
+    }*/
 
 }

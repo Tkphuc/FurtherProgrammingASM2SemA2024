@@ -54,16 +54,16 @@ public class AddDependentBeneficiaryController {
         dependent.setEmail(email);
         dependent.setFullName(fullName);
         String dependentID;
-        do{
-            dependentID = idGenerator.generateCustomerID();
-            dependent.setID(dependentID);
-        }while (dependentID ==);
+        dependentID = idGenerator.generateCustomerID();
+        dependent.setID(dependentID);
+
         dependent.setPhoneNumber(phoneNumber);
-        dependent.setPassword();
+        dependent.setPassword("default");
+        return dependent;
     }
     public void completeInsuranceCard(){
         insuranceCard.setCardHolder(dependent);
-        insuranceCard.setPolicyOwner();//get current user
+        //get current user
     }
     public void completeDependent(){
         dependent.setInsuranceCard(insuranceCard);

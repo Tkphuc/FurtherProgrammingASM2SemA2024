@@ -103,24 +103,21 @@ public class AddBeneficiaryScreen2Controller {
         this.policyHolder.setEmail(email);
         this.policyHolder.setFullName(fullName);
          this.policyHolder.setPhoneNumber(phoneNumber);
-        this.policyHolder.setPassword();
+        this.policyHolder.setPassword("default");
     }
     public void completePolicyHolder(){
         policyHolder.setInsuranceCard(insuranceCard);
     }
     public void completeInsuranceCard(){
-        insuranceCard = createInsuranceCard();
         insuranceCard.setCardHolder(policyHolder);
-        insuranceCard.setPolicyOwner();//get current user
+        //insuranceCard.setPolicyOwner();//get current user
     }
     public void createInsuranceCard(){
         insuranceCard.setExpirationDate(dateWrapper.dateCreate(getExpirationDate()));
         String cardID;
-        do{
-            cardID = idGenerator.generateCardID();
-            insuranceCard.setCardID(cardID);}
-        while (cardID == execu);
-        }
+        cardID = idGenerator.generateCardID();
+        insuranceCard.setCardID(cardID);}
+
     }
     /* store card back to database*/
 
@@ -128,4 +125,4 @@ public class AddBeneficiaryScreen2Controller {
 
 
 
-}
+

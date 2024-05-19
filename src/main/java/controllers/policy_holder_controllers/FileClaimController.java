@@ -81,7 +81,7 @@ public class FileClaimController {
     public void setNewClaim(Claim newClaim) {
         this.newClaim = newClaim;
     }
-
+    /*
     private Claim createNewClaim(){
         if(checkID()){
             newClaim.setInsuredPerson();//get insured person from database
@@ -98,5 +98,5 @@ public class FileClaimController {
         }
         newClaim.setStatus(Status.NEW);
         return newClaim;
-    }
+    }*/
 }

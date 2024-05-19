@@ -13,15 +13,12 @@ import javafx.stage.Stage;
 import database.QueryExecutor.*;
 
 public class Main extends Application{
-
-
-
     @Override
     public void start(Stage stage){
         try {
             QueryExecutor executor = new QueryExecutor();
             QueryExecutor.connectDatabase();
-            Parent parent = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("SystemAdminFXMLFiles/SystemAdminMenu.fxml"));
             Scene scene = new Scene(parent);
             stage.setScene(scene);
             stage.show();

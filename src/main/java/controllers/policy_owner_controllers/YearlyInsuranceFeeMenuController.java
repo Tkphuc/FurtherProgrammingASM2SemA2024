@@ -39,6 +39,6 @@ public class YearlyInsuranceFeeMenuController {
     }
     public void calculateYearlyFee(ActionEvent event){
 
-        setYearlyFee();
+        //setYearlyFee();
     }
 }

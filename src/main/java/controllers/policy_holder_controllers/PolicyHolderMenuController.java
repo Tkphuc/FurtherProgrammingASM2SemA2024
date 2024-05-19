@@ -57,7 +57,7 @@ public class PolicyHolderMenuController {
         FXMLLoader loader = new FXMLLoader();
         loader.getClass().getResource("PolicyHolderFXMLFiles/UpdatePersonalInformationPolicyHolder.fxml");
         UpdatePolicyHolderInfoController updatePolicyHolderInfoController = loader.getController();
-        updatePolicyHolderInfoController.setPolicyHolder(/*current user*/);
+        //updatePolicyHolderInfoController.setPolicyHolder(/*current user*/);
         updatePolicyHolderInfoController.initialize();
         Parent parent = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
