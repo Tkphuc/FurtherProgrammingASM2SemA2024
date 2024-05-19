@@ -10,6 +10,7 @@ import claim.Claim;
 import claim.ReceiverBankingInfo;
 import claim.Status;
 import insurance_card.InsuranceCard;
+import other_utilities.DateWrapper;
 import users.customers.Beneficiary;
 import users.customers.Dependent;
 import users.customers.PolicyHolder;
@@ -27,7 +28,7 @@ import java.util.List;
 /*https://stackoverflow.com/questions/11983554/reading-data-from-database-and-storing-in-array-list-object*/
 /*https://stackoverflow.com/questions/17502827/how-to-get-the-list-inside-a-resultset*/
 public class QueryExecutor {
-
+    DateWrapper dateWrapper = new DateWrapper();
     // Method to execute a query to fetch data from the "Claim" table
     public static void executeQuery(Connection conn) {
         String SQL = "SELECT * FROM public.Claim";
@@ -61,6 +62,47 @@ public class QueryExecutor {
             System.out.println(ex.getMessage());
         }
     }
+    public static void insertPolicyOwner(Connection conn, PolicyOwner policyOwner) {
+        String SQL = "INSERT INTO public.PolicyOwner (customerID, fullName,password,beneficiaries) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1,policyOwner.getID());
+            pstmt.setString(2, policyOwner.getFullName());
+            pstmt.setString(3,policyOwner.getPassword() );
+            pstmt.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+    public static void insertPolicyHolder(Connection conn, PolicyHolder policyHolder) {
+        String SQL = "INSERT INTO public.Holder (customerID, fullName,password,beneficiaries) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1,policyHolder.getID());
+            pstmt.setString(2, policyHolder.getFullName());
+            pstmt.setString(3,policyHolder.getPassword());
+            pstmt.setString(4,policyHolder.getAddress());
+            pstmt.setString(5,policyHolder.getEmail());
+            pstmt.setString(6,policyHolder.getPhoneNumber());
+            pstmt.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+    public static void insertDependent(Connection conn, Dependent dependent) {
+        String SQL = "INSERT INTO public.Holder (customerID, fullName,password,beneficiaries) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1,dependent.getID());
+            pstmt.setString(2, dependent.getFullName());
+            pstmt.setString(3,dependent.getPassword());
+            pstmt.setString(4,dependent.getAddress());
+            pstmt.setString(5,dependent.getEmail());
+            pstmt.setString(6,dependent.getPhoneNumber());
+            pstmt.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+
     public static List<Claim> loadAllClaims (Connection conn){
         String query = "SELECT * FROM Claim";
         ArrayList<Claim> allClaims = new ArrayList<>();
@@ -85,6 +127,7 @@ public class QueryExecutor {
         }
         return allClaims;
     }
+
     public static List<PolicyHolder> loadAllPolicyHolders(Connection conn){
         String query = "SELECT * FROM PolicyHolder";
         ArrayList<PolicyHolder> allPolicyHolder = new ArrayList<>();
@@ -101,8 +144,6 @@ public class QueryExecutor {
                 policyHolder.setPassword(resultSet.getString("password"));
                 policyHolder.setDependents((resultSet.getObject("dependents", List.class));
                 allPolicyHolder.add(policyHolder);
-
-
             }
         }catch (SQLException e){
 
