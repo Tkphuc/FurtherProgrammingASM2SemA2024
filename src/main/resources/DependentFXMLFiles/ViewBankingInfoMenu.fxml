@@ -16,15 +16,13 @@
       prefHeight="400.0" prefWidth="600.0"
       xmlns="http://javafx.com/javafx/17.0.2-ea"
       xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="controllers.policy_holder_controllers.ViewBankingInfoController">
-   <children>
-      <Button layoutX="455.0" layoutY="338.0" mnemonicParsing="false" text="Next" onAction="#switchToShowDocument" />
-      <Button layoutX="92.0" layoutY="338.0" mnemonicParsing="false" text="Return" onAction="#switchToRetrieveClaimMenu" />
-      <Text fx:id="bankName" layoutX="277.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="receiverName" layoutX="277.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="accountNumber" layoutX="277.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Label layoutX="40.0" layoutY="50.0" text="Bank Name" />
-      <Label layoutX="40.0" layoutY="89.0" text="Receiver Name" />
-      <Label layoutX="40.0" layoutY="128.0" text="Receiver Account Number" />
-   </children>
+      fx:controller="controllers.policy_holder_controllers.ViewBankingInfoController">
+    <Button layoutX="455.0" layoutY="338.0" mnemonicParsing="false" text="Next" onAction="#switchToShowDocument"/>
+    <Button layoutX="92.0" layoutY="338.0" mnemonicParsing="false" text="Return" onAction="#switchToRetrieveClaimMenu"/>
+    <Text fx:id="bankName" layoutX="277.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="receiverName" layoutX="277.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="accountNumber" layoutX="277.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Label layoutX="40.0" layoutY="50.0" text="Bank Name"/>
+    <Label layoutX="40.0" layoutY="89.0" text="Receiver Name"/>
+    <Label layoutX="40.0" layoutY="128.0" text="Receiver Account Number"/>
 </Pane>

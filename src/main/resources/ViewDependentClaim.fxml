@@ -9,14 +9,13 @@
   ~  */
   -->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Button layoutX="119.0" layoutY="344.0" mnemonicParsing="false" text="Return" />
-      <Label layoutX="40.0" layoutY="28.0" />
-      <Label layoutX="40.0" layoutY="59.0" text="Claim ID" />
-      <Label layoutX="40.0" layoutY="89.0" text="Claim Date" />
-      <Label layoutX="40.0" layoutY="126.0" text="Card Number" />
-      <Label layoutX="40.0" layoutY="160.0" text="Exam Date" />
-      <Label layoutX="40.0" layoutY="200.0" text="Label" />
-   </children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <Button layoutX="119.0" layoutY="344.0" mnemonicParsing="false" text="Return"/>
+    <Label layoutX="40.0" layoutY="28.0"/>
+    <Label layoutX="40.0" layoutY="59.0" text="Claim ID"/>
+    <Label layoutX="40.0" layoutY="89.0" text="Claim Date"/>
+    <Label layoutX="40.0" layoutY="126.0" text="Card Number"/>
+    <Label layoutX="40.0" layoutY="160.0" text="Exam Date"/>
+    <Label layoutX="40.0" layoutY="200.0" text="Label"/>
 </Pane>

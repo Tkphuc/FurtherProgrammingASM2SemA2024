@@ -10,21 +10,21 @@
   ~  */
   -->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
-<children>
-<Label layoutX="56.0" layoutY="164.0" text="Current email" />
-<Label layoutX="64.0" layoutY="192.0" text="New email" />
-<Label layoutX="32.0" layoutY="220.0" text="Current phone number" />
-<Label layoutX="39.0" layoutY="245.0" text="New phone number" />
-<Label layoutX="51.0" layoutY="272.0" text="Current address" />
-<Label layoutX="57.0" layoutY="297.0" text="New address" />
-<Text fx:id="currentEmail" layoutX="329.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-<Text fx:id="currentPhoneNumber" layoutX="329.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-<Text layoutX="329.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-<TextField fx:id="newEmail" layoutX="194.0" layoutY="188.0" prefHeight="25.0" prefWidth="325.0" />
-<TextField fx:id="newPhoneNumber" layoutX="194.0" layoutY="241.0" prefHeight="25.0" prefWidth="325.0" />
-<TextField fx:id="newAddress" layoutX="194.0" layoutY="293.0" prefHeight="25.0" prefWidth="325.0" />
-      <Button layoutX="91.0" layoutY="340.0" mnemonicParsing="false" text="Return" />
-      <Button layoutX="365.0" layoutY="340.0" mnemonicParsing="false" text="Save/Next" />
-</children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <Label layoutX="56.0" layoutY="164.0" text="Current email"/>
+    <Label layoutX="64.0" layoutY="192.0" text="New email"/>
+    <Label layoutX="32.0" layoutY="220.0" text="Current phone number"/>
+    <Label layoutX="39.0" layoutY="245.0" text="New phone number"/>
+    <Label layoutX="51.0" layoutY="272.0" text="Current address"/>
+    <Label layoutX="57.0" layoutY="297.0" text="New address"/>
+    <Text fx:id="currentEmail" layoutX="329.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="currentPhoneNumber" layoutX="329.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="Text"/>
+    <Text layoutX="329.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <TextField fx:id="newEmail" layoutX="194.0" layoutY="188.0" prefHeight="25.0" prefWidth="325.0"/>
+    <TextField fx:id="newPhoneNumber" layoutX="194.0" layoutY="241.0" prefHeight="25.0" prefWidth="325.0"/>
+    <TextField fx:id="newAddress" layoutX="194.0" layoutY="293.0" prefHeight="25.0" prefWidth="325.0"/>
+    <Button layoutX="91.0" layoutY="340.0" mnemonicParsing="false" text="Return"/>
+    <Button layoutX="365.0" layoutY="340.0" mnemonicParsing="false" text="Save/Next"/>
 </Pane>

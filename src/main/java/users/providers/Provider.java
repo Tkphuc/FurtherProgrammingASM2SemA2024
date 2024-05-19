@@ -41,11 +41,7 @@ public abstract class Provider implements Users, Serializable {
 
     @Override
     public boolean Login(String ID, String password) {
-        if(ID.equals(this.providerID) && password.equals(this.password)){
-            return true;
-        }else {
-            return false;
-        }
+        return ID.equals(this.providerID) && password.equals(this.password);
     }
 
     @Override

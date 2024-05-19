@@ -18,13 +18,13 @@
       prefHeight="400.0" prefWidth="600.0"
       xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="controllers.system_admin_controllers.UpdateInsuranceCardMenuController">
-   <children>
-      <Button fx:id="returnButton" layoutX="127.0" layoutY="314.0" mnemonicParsing="false" text="Return" onAction="#switchToSystemAdminMenu" />
-      <Button fx:id="saveButton" layoutX="387.0" layoutY="314.0" mnemonicParsing="false" text="Save" />
-      <Label layoutX="38.0" layoutY="61.0" text="Current expiration date" />
-      <Label layoutX="46.0" layoutY="99.0" text="New expiration date" />
-      <Text fx:id="currentExpirationDate" layoutX="289.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <TextField fx:id="newExpirationDateField" layoutX="185.0" layoutY="95.0" prefHeight="25.0" prefWidth="391.0"  />
-   </children>
+      fx:controller="controllers.system_admin_controllers.UpdateInsuranceCardMenuController">
+    <Button fx:id="returnButton" layoutX="127.0" layoutY="314.0" mnemonicParsing="false" text="Return"
+            onAction="#switchToSystemAdminMenu"/>
+    <Button fx:id="saveButton" layoutX="387.0" layoutY="314.0" mnemonicParsing="false" text="Save"/>
+    <Label layoutX="38.0" layoutY="61.0" text="Current expiration date"/>
+    <Label layoutX="46.0" layoutY="99.0" text="New expiration date"/>
+    <Text fx:id="currentExpirationDate" layoutX="289.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="Text"/>
+    <TextField fx:id="newExpirationDateField" layoutX="185.0" layoutY="95.0" prefHeight="25.0" prefWidth="391.0"/>
 </Pane>

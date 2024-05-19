@@ -8,13 +8,11 @@ package controllers.policy_holder_controllers;
 
 import claim.Claim;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -29,7 +27,7 @@ public class ChooseUserToRetrieveClaimController {
     }
     public void getClaimFromDatabase(){
         if(!getClaimID().isBlank() && getClaimID() != null ){
-            if(getClaimID() )
+
         }
     }
 

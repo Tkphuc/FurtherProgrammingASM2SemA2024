@@ -10,33 +10,37 @@
   ~  */
   -->
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Update Personal Information - Policy Holder" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.policy_holder_controllers.UpdatePolicyHolderInfoController">
-   <content>
-      <Pane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <TextField fx:id="newAddressField" layoutX="149.0" layoutY="69.0" prefHeight="25.0" prefWidth="414.0" />
-            <TextField fx:id="newPhoneNumberField" layoutX="151.0" layoutY="128.0" prefHeight="25.0" prefWidth="410.0" />
-            <TextField fx:id="newEmailField" layoutX="154.0" layoutY="191.0" prefHeight="25.0" prefWidth="403.0" />
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" text="Update Personal Information - Policy Holder"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.policy_holder_controllers.UpdatePolicyHolderInfoController">
+    <Pane prefHeight="200.0" prefWidth="200.0">
+        <TextField fx:id="newAddressField" layoutX="149.0" layoutY="69.0" prefHeight="25.0" prefWidth="414.0"/>
+        <TextField fx:id="newPhoneNumberField" layoutX="151.0" layoutY="128.0" prefHeight="25.0" prefWidth="410.0"/>
+        <TextField fx:id="newEmailField" layoutX="154.0" layoutY="191.0" prefHeight="25.0" prefWidth="403.0"/>
 
-            <Label layoutX="35.0" layoutY="73.0" text="New address" />
-            <Label layoutX="17.0" layoutY="132.0" text="New phone number" />
-            <Label layoutX="43.0" layoutY="195.0" text="New email" />
+        <Label layoutX="35.0" layoutY="73.0" text="New address"/>
+        <Label layoutX="17.0" layoutY="132.0" text="New phone number"/>
+        <Label layoutX="43.0" layoutY="195.0" text="New email"/>
 
-            <Button fx:id="saveButton" layoutX="438.0" layoutY="306.0" mnemonicParsing="false" text="Save" />
-            <Button fx:id="returnButton" layoutX="87.0" layoutY="306.0" mnemonicParsing="false" onAction="#switchToPolicyHolderMenuController" text="Return" />
+        <Button fx:id="saveButton" layoutX="438.0" layoutY="306.0" mnemonicParsing="false" text="Save"/>
+        <Button fx:id="returnButton" layoutX="87.0" layoutY="306.0" mnemonicParsing="false"
+                onAction="#switchToPolicyHolderMenuController" text="Return"/>
 
-            <Label layoutX="29.0" layoutY="23.0" text="Current address" />
-            <Label layoutX="17.0" layoutY="103.0" text="Current phone number" />
+        <Label layoutX="29.0" layoutY="23.0" text="Current address"/>
+        <Label layoutX="17.0" layoutY="103.0" text="Current phone number"/>
 
-            <Text fx:id="currentAddress" layoutX="281.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current address" />
-            <Text fx:id="currentPhoneNumber" layoutX="253.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current phone number" />
-            <Text fx:id="currentEmail" layoutX="278.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current email" />
-            <Label layoutX="35.0" layoutY="167.0" text="Current email" />
-            <Label layoutX="23.0" layoutY="227.0" text="Current password" />
-            <Text fx:id="currentPasswordText" layoutX="302.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Label layoutX="23.0" layoutY="266.0" text="New password" />
-            <TextField fx:id="newPasswordField" layoutX="154.0" layoutY="254.0" prefHeight="25.0" prefWidth="407.0" />
-         </children>
-      </Pane>
-   </content>
+        <Text fx:id="currentAddress" layoutX="281.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Current address"/>
+        <Text fx:id="currentPhoneNumber" layoutX="253.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Current phone number"/>
+        <Text fx:id="currentEmail" layoutX="278.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Current email"/>
+        <Label layoutX="35.0" layoutY="167.0" text="Current email"/>
+        <Label layoutX="23.0" layoutY="227.0" text="Current password"/>
+        <Text fx:id="currentPasswordText" layoutX="302.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Text"/>
+        <Label layoutX="23.0" layoutY="266.0" text="New password"/>
+        <TextField fx:id="newPasswordField" layoutX="154.0" layoutY="254.0" prefHeight="25.0" prefWidth="407.0"/>
+    </Pane>
 </TitledPane>

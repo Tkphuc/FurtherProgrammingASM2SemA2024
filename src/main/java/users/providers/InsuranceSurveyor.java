@@ -6,8 +6,6 @@
 
 package users.providers;
 
-import java.util.Objects;
-
 public class InsuranceSurveyor extends Provider{
     private InsuranceManager manager;
     public InsuranceSurveyor(){super();}

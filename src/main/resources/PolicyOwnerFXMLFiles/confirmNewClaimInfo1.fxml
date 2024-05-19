@@ -17,27 +17,29 @@
       prefHeight="400.0" prefWidth="600.0"
       xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="controllers.policy_owner_controllers.ConfirmNewClaimInfo1Controller">
-   <children>
-      <Button fx:id="returnButton" layoutX="90.0" layoutY="320.0" mnemonicParsing="false" text="Return" onAction="#switchToReceiverBankingInfo" />
-      <Button fx:id="NextButton" layoutX="434.0" layoutY="320.0" mnemonicParsing="false" text="Next" onAction="#switchToConfirmNewClamInfo2" />
-      <Label layoutX="45.0" layoutY="28.0" text="Claim ID" />
-      <Label layoutX="45.0" layoutY="55.0" text="Claim Date" />
-      <Label layoutX="33.0" layoutY="86.0" text="Insured Person Name" />
-      <Label layoutX="43.0" layoutY="114.0" text="Insured Person ID" />
-      <Label layoutX="54.0" layoutY="146.0" text="Card Number" />
-      <Label layoutX="52.0" layoutY="183.0" text="Claim Amount" />
-      <Label layoutX="50.0" layoutY="216.0" text="Reciever Name" />
-      <Label layoutX="53.0" layoutY="248.0" prefHeight="17.0" prefWidth="73.0" text="Receiver Bank" />
-      <Label layoutX="42.0" layoutY="283.0" text="Receiver Bank Number" />
-      <Text fx:id="claimIDText" layoutX="245.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="claimDateText" layoutX="245.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="insuredPersonName" layoutX="245.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="insuredPersonIDText" layoutX="245.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="cardNumberText" layoutX="245.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="claimAmountText" layoutX="256.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="receiverNameText" layoutX="256.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="receiverBankText" layoutX="256.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="receiverBankNumberText" layoutX="256.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-   </children>
+      fx:controller="controllers.policy_owner_controllers.ConfirmNewClaimInfo1Controller">
+    <Button fx:id="returnButton" layoutX="90.0" layoutY="320.0" mnemonicParsing="false" text="Return"
+            onAction="#switchToReceiverBankingInfo"/>
+    <Button fx:id="NextButton" layoutX="434.0" layoutY="320.0" mnemonicParsing="false" text="Next"
+            onAction="#switchToConfirmNewClamInfo2"/>
+    <Label layoutX="45.0" layoutY="28.0" text="Claim ID"/>
+    <Label layoutX="45.0" layoutY="55.0" text="Claim Date"/>
+    <Label layoutX="33.0" layoutY="86.0" text="Insured Person Name"/>
+    <Label layoutX="43.0" layoutY="114.0" text="Insured Person ID"/>
+    <Label layoutX="54.0" layoutY="146.0" text="Card Number"/>
+    <Label layoutX="52.0" layoutY="183.0" text="Claim Amount"/>
+    <Label layoutX="50.0" layoutY="216.0" text="Reciever Name"/>
+    <Label layoutX="53.0" layoutY="248.0" prefHeight="17.0" prefWidth="73.0" text="Receiver Bank"/>
+    <Label layoutX="42.0" layoutY="283.0" text="Receiver Bank Number"/>
+    <Text fx:id="claimIDText" layoutX="245.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="claimDateText" layoutX="245.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="insuredPersonName" layoutX="245.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="insuredPersonIDText" layoutX="245.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="Text"/>
+    <Text fx:id="cardNumberText" layoutX="245.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="claimAmountText" layoutX="256.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="receiverNameText" layoutX="256.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="receiverBankText" layoutX="256.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text"/>
+    <Text fx:id="receiverBankNumberText" layoutX="256.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="Text"/>
 </Pane>

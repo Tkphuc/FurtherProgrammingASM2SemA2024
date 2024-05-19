@@ -44,7 +44,5 @@ public class InsuranceManager extends Provider {
     public int hashCode() {
         return this.getID().length();
     }
-//public boolean ApproveClaim(){}
-    //public users.providers.Beneficiary RetrieveSurveyors(){}
 
 }

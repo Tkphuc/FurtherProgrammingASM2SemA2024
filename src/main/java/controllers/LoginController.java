@@ -55,28 +55,16 @@ public class LoginController {
 
     public LoginController() {
     }
-    /*
-    public void showLoginScreen(){
-        try {
-            Parent parent = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));
-            scene = new Scene(parent);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-
-        }
-
-    }*/
     @FXML
     public void Login(ActionEvent event){
       boolean b = user.Login(getEnteredID(),getEnteredPassword());
       if(!b){
 
-      }else if(b){
+      }else {
           if(user instanceof Customer){
               switch (user) {
                   case PolicyOwner policyOwner -> {
-                      Parent root = null;
+                      Parent root;
                       try {
                           FXMLLoader loader = new FXMLLoader();
                           loader.getClass().getResource("PolicyOwnerFXMLFiles/PolicyOwnerMenu.fxml");
@@ -91,7 +79,7 @@ public class LoginController {
                       stage.show();
                   }
                   case PolicyHolder policyHolder -> {
-                      Parent root = null;
+                      Parent root;
                       try {
                           FXMLLoader loader = new FXMLLoader();
                           loader.getClass().getResource("PolicyHolderFXMLFiles/PolicyHolderMenu.fxml");
@@ -107,7 +95,7 @@ public class LoginController {
                       stage.show();
                   }
                   case Dependent dependent -> {
-                      Parent root = null;
+                      Parent root;
                       try {
                           FXMLLoader loader = new FXMLLoader();
                           loader.getClass().getResource("DependentFXMLFiles/DependentMenu.fxml");
@@ -128,7 +116,7 @@ public class LoginController {
           }else if (user instanceof Provider){
               switch (user) {
                   case InsuranceManager insuranceManager -> {
-                      Parent root = null;
+                      Parent root;
                       try {
                           FXMLLoader loader = new FXMLLoader();
                           loader.getClass().getResource("InsuranceManagerFXMLFiles/InsuranceManagerMenu.fxml");
@@ -144,7 +132,7 @@ public class LoginController {
                       stage.show();
                   }
                   case InsuranceSurveyor insuranceSurveyor -> {
-                      Parent root = null;
+                      Parent root;
                       try {
                           FXMLLoader loader = new FXMLLoader();
                           loader.getClass().getResource("InsuranceSurveyorFXMLFiles/InsuranceSurveyorMenu.fxml");
@@ -164,7 +152,7 @@ public class LoginController {
                   }
               }
           } else if (user instanceof SystemAdmin) {
-              Parent root = null;
+              Parent root;
               try {
                   root = FXMLLoader.load(getClass().getResource("SystemAdminMenuController.fxml"));
               } catch (IOException e) {

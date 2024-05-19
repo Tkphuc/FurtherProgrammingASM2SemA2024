@@ -48,10 +48,6 @@ public class AddBeneficiaryScreen2Controller {
     public String getBeneficiaryIDText() {
         return beneficiaryIDText.getText();
     }
-    /*
-    public String getCardID() {
-        return cardIDField.getText();
-    }*/
     public String getExpirationDate() {
         return expirationDateField.getText();
     }
@@ -123,7 +119,7 @@ public class AddBeneficiaryScreen2Controller {
         do{
             cardID = idGenerator.generateCardID();
             insuranceCard.setCardID(cardID);}
-        while (cardID ==);
+        while (cardID == execu);
         }
     }
     /* store card back to database*/

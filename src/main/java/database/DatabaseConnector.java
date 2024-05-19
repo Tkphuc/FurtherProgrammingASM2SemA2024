@@ -4,7 +4,7 @@
  *
  */
 
-package Database;
+package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -24,9 +24,5 @@ public class DatabaseConnector {
             System.out.println(e.getMessage());
         }
         return conn;
-    }
-
-    public static void main(String[] args) {
-        connect();
     }
 }

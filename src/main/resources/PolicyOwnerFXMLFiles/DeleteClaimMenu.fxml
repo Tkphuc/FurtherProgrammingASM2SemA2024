@@ -15,11 +15,10 @@
       prefHeight="400.0" prefWidth="600.0"
       xmlns="http://javafx.com/javafx/17.0.2-ea"
       xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="controllers.policy_owner_controllers.DeleteClaimMenuController">
-   <children>
-      <Button fx:id="returnButton" layoutX="115.0" layoutY="304.0" mnemonicParsing="false" text="Return" onAction="#switchToPolicyOwnerMenu" />
-      <Button fx:id="deleteButton" layoutX="404.0" layoutY="304.0" mnemonicParsing="false" text="Delete" />
-      <Label layoutX="38.0" layoutY="66.0" text="Claim ID" />
-      <TextField fx:id="claimIDField" layoutX="115.0" layoutY="62.0" prefHeight="25.0" prefWidth="451.0" />
-   </children>
+      fx:controller="controllers.policy_owner_controllers.DeleteClaimMenuController">
+    <Button fx:id="returnButton" layoutX="115.0" layoutY="304.0" mnemonicParsing="false" text="Return"
+            onAction="#switchToPolicyOwnerMenu"/>
+    <Button fx:id="deleteButton" layoutX="404.0" layoutY="304.0" mnemonicParsing="false" text="Delete"/>
+    <Label layoutX="38.0" layoutY="66.0" text="Claim ID"/>
+    <TextField fx:id="claimIDField" layoutX="115.0" layoutY="62.0" prefHeight="25.0" prefWidth="451.0"/>
 </Pane>

@@ -11,7 +11,7 @@ import java.util.List;
 import other_utilities.Collection;
 
 public class DependentCollection implements Collection {
-    private List<Dependent> dependentCollection = new ArrayList<>();
+    private List<Dependent> dependentCollection;
     private int currentItem;
     public DependentCollection(List<Dependent> dependentCollection) {
         this.dependentCollection = dependentCollection;

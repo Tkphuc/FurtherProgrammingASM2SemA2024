@@ -29,7 +29,7 @@ public class RetrieveDependentClaimMenuController {
     public String getClaimIDField() {
         return claimIDField.getText();
     }
-    public Claim getClaim(){}//search for claim from claim id field
+    public Claim getClaim(){return claim;}//search for claim from claim id field
     public void switchToDependentMenu(ActionEvent event) throws IOException {
         Parent parent = FXMLLoader.load(getClass().getResource("DependentFXMLFiles/DependentMenu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();

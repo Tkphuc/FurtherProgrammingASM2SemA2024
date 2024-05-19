@@ -9,36 +9,34 @@
   ~  */
   -->
 
-<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Insurance Manager Menu" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.insurance_manager_controllers.InsuranceManagerMenuController">
-   <content>
-      <Pane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <VBox fx:id="functions" layoutX="64.0" layoutY="67.0" prefHeight="127.0" prefWidth="189.0">
-               <children>
-                  <Button fx:id="approveMenuButton" mnemonicParsing="false" text="Approve/Reject proposed claims" onAction="#switchToApproveClaimMenu">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="retrieveAllClaimsButton" mnemonicParsing="false" text="Retrieve all claims">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="retrieveAllCustomersButton" mnemonicParsing="false" text="Retrieve all custoners">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="retrieveSurveyorsButton" mnemonicParsing="false" text="Retrieve surveyors info">
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="exitButton" mnemonicParsing="false" text="Exit" onAction= "#switchToLoginScreen" />
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-   </content>
+<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" text="Insurance Manager Menu" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.insurance_manager_controllers.InsuranceManagerMenuController">
+    <Pane prefHeight="200.0" prefWidth="200.0">
+        <VBox fx:id="functions" layoutX="64.0" layoutY="67.0" prefHeight="127.0" prefWidth="189.0">
+            <Button fx:id="approveMenuButton" mnemonicParsing="false" text="Approve/Reject proposed claims"
+                    onAction="#switchToApproveClaimMenu">
+                <VBox.margin>
+                    <Insets bottom="10.0"/>
+                </VBox.margin>
+            </Button>
+            <Button fx:id="retrieveAllClaimsButton" mnemonicParsing="false" text="Retrieve all claims">
+                <VBox.margin>
+                    <Insets bottom="10.0"/>
+                </VBox.margin>
+            </Button>
+            <Button fx:id="retrieveAllCustomersButton" mnemonicParsing="false" text="Retrieve all custoners">
+                <VBox.margin>
+                    <Insets bottom="10.0"/>
+                </VBox.margin>
+            </Button>
+            <Button fx:id="retrieveSurveyorsButton" mnemonicParsing="false" text="Retrieve surveyors info">
+                <VBox.margin>
+                    <Insets bottom="10.0"/>
+                </VBox.margin>
+            </Button>
+            <Button fx:id="exitButton" mnemonicParsing="false" text="Exit" onAction="#switchToLoginScreen"/>
+        </VBox>
+    </Pane>
 </TitledPane>

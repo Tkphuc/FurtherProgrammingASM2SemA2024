@@ -38,11 +38,10 @@ public class IDGenerator {
     public String generateCardID(){
         Random random = new Random();
         int CARD_ID_LENGTH = 10;
-        String newString = random.ints(leftLimit,rightLimit+1).
+        return random.ints(leftLimit,rightLimit+1).
                 limit(CARD_ID_LENGTH).
                 collect(StringBuilder::new,
                         StringBuilder::appendCodePoint,
                         StringBuilder::append).toString();
-        return newString;
     }
 }

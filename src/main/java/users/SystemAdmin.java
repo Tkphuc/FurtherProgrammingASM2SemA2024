@@ -45,11 +45,7 @@ public class SystemAdmin implements Users {
     public void updateUser(){}
     @Override
     public boolean Login(String ID, String password) {
-        if(ID.equals(this.adminID) && password.equals(this.password)){
-            return true;
-        }else {
-            return false;
-        }
+        return ID.equals(this.adminID) && password.equals(this.password);
     }
 
     @Override

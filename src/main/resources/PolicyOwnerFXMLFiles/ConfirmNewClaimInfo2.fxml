@@ -16,10 +16,9 @@
       prefHeight="400.0" prefWidth="600.0"
       xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="controllers.policy_owner_controllers.ConfirmNewClaimInfo2Controller">
-   <children>
-      <Button fx:id="returnButton" layoutX="112.0" layoutY="322.0" mnemonicParsing="false" text="Return" onAction="#switchToConfirmNewClamInfo1" />
-      <Button fx:id="saveButton" layoutX="417.0" layoutY="322.0" mnemonicParsing="false" text="Save" />
-      <Label layoutX="42.0" layoutY="50.0" text="Documents" />
-   </children>
+      fx:controller="controllers.policy_owner_controllers.ConfirmNewClaimInfo2Controller">
+    <Button fx:id="returnButton" layoutX="112.0" layoutY="322.0" mnemonicParsing="false" text="Return"
+            onAction="#switchToConfirmNewClamInfo1"/>
+    <Button fx:id="saveButton" layoutX="417.0" layoutY="322.0" mnemonicParsing="false" text="Save"/>
+    <Label layoutX="42.0" layoutY="50.0" text="Documents"/>
 </Pane>

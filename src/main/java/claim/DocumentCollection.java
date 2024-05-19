@@ -6,8 +6,6 @@
 
 package claim;
 
-import users.customers.Beneficiary;
-
 import java.util.ArrayList;
 import java.util.List;
 import other_utilities.Collection;

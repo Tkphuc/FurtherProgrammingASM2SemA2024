@@ -50,7 +50,7 @@ public class AddBeneficiaryScreen1Controller {
         do{  customerID = idGenerator.generateCustomerID();
             addBeneficiaryScreen2Controller.setBeneficiaryIDText(idGenerator.generateCustomerID());
         }
-        while(customerID ==);
+        while(customerID != );
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import users.providers.InsuranceManager;
 
 import java.io.IOException;
 
@@ -35,7 +36,7 @@ public class InsuranceSurveyorMenuController {
     @FXML
     private Stage stage;
     @FXML private Scene scene;
-
+    private InsuranceManager insuranceManager;
     public InsuranceSurveyorMenuController() {
     }
 
@@ -49,4 +50,7 @@ public class InsuranceSurveyorMenuController {
         stage.show();
     }
 
+    public void setInsuranceManager(InsuranceManager user) {
+        this.insuranceManager = user;
+    }
 }

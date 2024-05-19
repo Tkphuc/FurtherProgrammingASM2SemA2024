@@ -69,21 +69,13 @@ public class FileClaimController {
         stage.show();
     }
     public boolean checkID(){
-        if(formatCheck.customerIDCheck(getCustomerID())!= null){
-            return true;
-        }else {return false;}
+        return formatCheck.customerIDCheck(getCustomerID()) != null;
     }
     public boolean checkDate(String date){
-        if(dateWrapper.dateCreate(date) == null){
-            return false;
-        } else  {
-            return true;
-        }
+        return dateWrapper.dateCreate(date) != null;
     }
     public boolean checkDocument(String document){
-        if (formatCheck.documentNameCheck(document) != null){
-            return true;
-        }else {return false;}
+        return formatCheck.documentNameCheck(document) != null;
     }
 
     public void setNewClaim(Claim newClaim) {

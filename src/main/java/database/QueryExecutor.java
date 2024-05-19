@@ -4,7 +4,7 @@
  *
  */
 
-package Database;
+package database;
 
 import claim.Claim;
 import claim.ReceiverBankingInfo;
@@ -20,7 +20,6 @@ import users.providers.InsuranceManager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.sql.SQLException;
 import java.sql.Date;
 import java.util.ArrayList;
@@ -29,19 +28,6 @@ import java.util.List;
 /*https://stackoverflow.com/questions/17502827/how-to-get-the-list-inside-a-resultset*/
 public class QueryExecutor {
     DateWrapper dateWrapper = new DateWrapper();
-    // Method to execute a query to fetch data from the "Claim" table
-    public static void executeQuery(Connection conn) {
-        String SQL = "SELECT * FROM public.Claim";
-        try (Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(SQL)) {
-            while (rs.next()) {
-                // Modify "column_name" to the actual column you want to retrieve
-                System.out.println(rs.getString("column_name"));
-            }
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
     // Method to insert a new claim into the database
     public static void insertClaim(Connection conn, Claim claim) {
         String SQL = "INSERT INTO public.Claim (claim_id, claim_date, insured_person_id, card_number, exam_date, documents, claim_amount, status, banking_info_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -55,7 +41,7 @@ public class QueryExecutor {
             pstmt.setArray(6, conn.createArrayOf("text", claim.getDocuments().toArray(new String[0])));
             pstmt.setDouble(7, claim.getClaimAmount());
             pstmt.setString(8, claim.getStatusAsString()); // Assuming getStatus returns a String
-            pstmt.setString(9, claim.getReceiverBankingInfo().getBankingInfoID()); // Ensure ReceiverBankingInfo class has getBankingInfoID method
+            pstmt.setObject(9, claim.getReceiverBankingInfo()); // Ensure ReceiverBankingInfo class has getBankingInfoID method
 
             pstmt.executeUpdate();
         } catch (SQLException ex) {
@@ -142,7 +128,7 @@ public class QueryExecutor {
                 policyHolder.setFullName(resultSet.getString("fullName"));
                 policyHolder.setID(resultSet.getString("customerID"));
                 policyHolder.setPassword(resultSet.getString("password"));
-                policyHolder.setDependents((resultSet.getObject("dependents", List.class));
+                policyHolder.setDependents((resultSet.getObject("dependents", List.class)));
                 allPolicyHolder.add(policyHolder);
             }
         }catch (SQLException e){
@@ -165,7 +151,7 @@ public class QueryExecutor {
                 dependent.setID(resultSet.getString("customerID"));
                 dependent.setPassword(resultSet.getString("password"));
                 dependent.setDependOn((PolicyHolder) resultSet.getObject("dependOn"));
-                dependent.setInsuranceCard();
+                dependent.setInsuranceCard((InsuranceCard)resultSet.getObject("insuranceCard") );
                 allDependents.add(dependent);
             }
         }catch (SQLException e){
@@ -213,12 +199,8 @@ public class QueryExecutor {
 
 
 
-    public static void main(String[] args) {
+    public static void connectDatabase() {
         Connection conn = DatabaseConnector.connect(); // Ensure DatabaseConnector class exists and can establish a connection
         // Call both methods to demonstrate functionality
-        executeQuery(conn);
-        // You would typically create a Claim object here and pass it to insertClaim
-        // Claim claim = new Claim(...);
-        // insertClaim(conn, claim);
     }
 }
